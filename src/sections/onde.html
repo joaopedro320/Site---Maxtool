@@ -1,0 +1,23 @@
+  <section class="section on-paper onde" id="onde-comprar" aria-labelledby="onde-title">
+    <div class="container onde-inner">
+      <div>
+        <p class="eyebrow">Para o marmorista</p>
+        <h2 id="onde-title">Na loja,<br>peça <span class="red">Maxtool</span>.</h2>
+        <p class="lead">A Maxtool é vendida pelas revendas parceiras — são mais de 250 lojas em todo o Brasil. Digite seu CEP e a gente te passa o contato da mais próxima.</p>
+        <form class="cep-form" id="cep-form" novalidate>
+          <label class="sr-only" for="cep">Seu CEP</label>
+          <svg><use href="#i-pin"/></svg>
+          <input id="cep" name="cep" inputmode="numeric" placeholder="Seu CEP" autocomplete="postal-code" maxlength="9" required>
+          <input class="hp" id="oc-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-red" type="submit" id="cep-buscar">Localizar</button>
+        </form>
+        <p class="form-status" id="cep-status" role="status"></p>
+        <div class="lojas" id="lojas"></div>
+      </div>
+      <div class="mapa" aria-hidden="true">
+        <div class="radar"><span></span><span></span><span></span><i class="sweep"></i></div>
+        <div class="dots" id="mapa-dots"></div>
+        <div class="mapa-label"><b data-count="250" data-prefix="+">+250</b><span>revendas parceiras<br>pelo Brasil</span></div>
+      </div>
+    </div>
+  </section>

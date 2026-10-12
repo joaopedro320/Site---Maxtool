@@ -1,0 +1,1152 @@
+[
+ {
+  "slug": "serra-marmore",
+  "nome": "Serra Mármore",
+  "modelo": "SM-MT-023",
+  "img": "/pecas/serra-marmore.svg",
+  "w": 2328,
+  "h": 2421,
+  "pecas": [
+   {
+    "ref": 1,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 2,
+    "nome": "Flange externa"
+   },
+   {
+    "ref": 4,
+    "nome": "Flange interna"
+   },
+   {
+    "ref": 5,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 6,
+    "nome": "Mancal"
+   },
+   {
+    "ref": 7,
+    "nome": "Eixo"
+   },
+   {
+    "ref": 8,
+    "nome": "Retentor"
+   },
+   {
+    "ref": 9,
+    "nome": "Rolamento 6201"
+   },
+   {
+    "ref": 10,
+    "nome": "Junta de vedação ondulada"
+   },
+   {
+    "ref": 11,
+    "nome": "Grampo de retenção"
+   },
+   {
+    "ref": 12,
+    "nome": "Engrenagem"
+   },
+   {
+    "ref": 13,
+    "nome": "Rolamento 606"
+   },
+   {
+    "ref": 14,
+    "nome": "Caixa da engrenagem"
+   },
+   {
+    "ref": 15,
+    "nome": "Porca"
+   },
+   {
+    "ref": 16,
+    "nome": "Pinhão"
+   },
+   {
+    "ref": 17,
+    "nome": "Anel de vedação"
+   },
+   {
+    "ref": 18,
+    "nome": "Rolamento 629"
+   },
+   {
+    "ref": 19,
+    "nome": "Junta do rolamento 629"
+   },
+   {
+    "ref": 20,
+    "nome": "Ventilador do rotor"
+   },
+   {
+    "ref": 21,
+    "nome": "Rotor"
+   },
+   {
+    "ref": 22,
+    "nome": "Coletor de pó 608"
+   },
+   {
+    "ref": 23,
+    "nome": "Rolamento 608"
+   },
+   {
+    "ref": 24,
+    "nome": "Capa do rolamento 608"
+   },
+   {
+    "ref": 25,
+    "nome": "Defletor de ar"
+   },
+   {
+    "ref": 26,
+    "nome": "Estator"
+   },
+   {
+    "ref": 27,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 28,
+    "nome": "Caixa de campo"
+   },
+   {
+    "ref": 29,
+    "nome": "Capa traseira"
+   },
+   {
+    "ref": 30,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 31,
+    "nome": "Porta escova"
+   },
+   {
+    "ref": 32,
+    "nome": "Escova de Carvão"
+   },
+   {
+    "ref": 33,
+    "nome": "Tampa do porta escova"
+   },
+   {
+    "ref": 34,
+    "nome": "Capacitor"
+   },
+   {
+    "ref": 35,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 36,
+    "nome": "Porta pó"
+   },
+   {
+    "ref": 37,
+    "nome": "Gatilho"
+   },
+   {
+    "ref": 38,
+    "nome": "Capa do travamento automático"
+   },
+   {
+    "ref": 39,
+    "nome": "Punho esquerdo"
+   },
+   {
+    "ref": 40,
+    "nome": "Fixador do cabo"
+   },
+   {
+    "ref": 41,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 42,
+    "nome": "Protetor do cabo"
+   },
+   {
+    "ref": 43,
+    "nome": "Cabo de força"
+   },
+   {
+    "ref": 44,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 45,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 46,
+    "nome": "Adaptador para água"
+   },
+   {
+    "ref": 47,
+    "nome": "Porca"
+   },
+   {
+    "ref": 48,
+    "nome": "Grampo de retenção"
+   },
+   {
+    "ref": 49,
+    "nome": "Trava da base"
+   },
+   {
+    "ref": 50,
+    "nome": "Porca"
+   },
+   {
+    "ref": 51,
+    "nome": "Pino Elástico"
+   },
+   {
+    "ref": 52,
+    "nome": "Base"
+   },
+   {
+    "ref": 53,
+    "nome": "Parafuso da base"
+   }
+  ]
+ },
+ {
+  "slug": "politriz-mt023",
+  "nome": "Politriz Elétrica Úmido",
+  "modelo": "MT-023",
+  "img": "/pecas/politriz-mt023.svg",
+  "w": 2343,
+  "h": 2964,
+  "pecas": [
+   {
+    "ref": 1,
+    "nome": "Tubo de cobre"
+   },
+   {
+    "ref": 2,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 3,
+    "nome": "Grampo de retenção"
+   },
+   {
+    "ref": 4,
+    "nome": "Retentor de borracha"
+   },
+   {
+    "ref": 5,
+    "nome": "Caixa da engrenagem"
+   },
+   {
+    "ref": 6,
+    "nome": "Porca sextavada"
+   },
+   {
+    "ref": 7,
+    "nome": "Pinhão"
+   },
+   {
+    "ref": 8,
+    "nome": "Anel de vedação de borracha"
+   },
+   {
+    "ref": 9,
+    "nome": "Defletor de óleo"
+   },
+   {
+    "ref": 10,
+    "nome": "Rolamento 6200VV"
+   },
+   {
+    "ref": 11,
+    "nome": "Gaxeta"
+   },
+   {
+    "ref": 12,
+    "nome": "Anel de vedação de borracha"
+   },
+   {
+    "ref": 13,
+    "nome": "Almofada de lã"
+   },
+   {
+    "ref": 14,
+    "nome": "Tampa do rolamento"
+   },
+   {
+    "ref": 15,
+    "nome": "Rotor"
+   },
+   {
+    "ref": 16,
+    "nome": "Defletor de ar"
+   },
+   {
+    "ref": 17,
+    "nome": "Empunhadura"
+   },
+   {
+    "ref": 18,
+    "nome": "Rolamento 6000ZZ"
+   },
+   {
+    "ref": 19,
+    "nome": "Engrenagem"
+   },
+   {
+    "ref": 20,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 21,
+    "nome": "Capa do rolamento"
+   },
+   {
+    "ref": 22,
+    "nome": "Rolamento 6202DD"
+   },
+   {
+    "ref": 23,
+    "nome": "Chaveta"
+   },
+   {
+    "ref": 24,
+    "nome": "Eixo"
+   },
+   {
+    "ref": 25,
+    "nome": "Almofada de lã"
+   },
+   {
+    "ref": 26,
+    "nome": "Junta"
+   },
+   {
+    "ref": 27,
+    "nome": "Mancal"
+   },
+   {
+    "ref": 28,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 29,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 30,
+    "nome": "Suporte de proteção"
+   },
+   {
+    "ref": 31,
+    "nome": "Flange interna"
+   },
+   {
+    "ref": 32,
+    "nome": "Flange externa"
+   },
+   {
+    "ref": 34,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 35,
+    "nome": "Estator"
+   },
+   {
+    "ref": 36,
+    "nome": "Caixa de campo"
+   },
+   {
+    "ref": 38,
+    "nome": "Protetor do rolamento"
+   },
+   {
+    "ref": 39,
+    "nome": "Rolamento 608SS"
+   },
+   {
+    "ref": 40,
+    "nome": "Camisa do rolamento"
+   },
+   {
+    "ref": 41,
+    "nome": "Parafuso mosca"
+   },
+   {
+    "ref": 42,
+    "nome": "Porta Escova"
+   },
+   {
+    "ref": 43,
+    "nome": "Tampa do porta escova"
+   },
+   {
+    "ref": 44,
+    "nome": "Escova de carvão"
+   },
+   {
+    "ref": 45,
+    "nome": "Gatilho / Interruptor"
+   },
+   {
+    "ref": 46,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 47,
+    "nome": "Punho direito"
+   },
+   {
+    "ref": 48,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 49,
+    "nome": "Fixador do cabo"
+   },
+   {
+    "ref": 50,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 51,
+    "nome": "Punho esquerdo"
+   },
+   {
+    "ref": 52,
+    "nome": "Protetor do cabo"
+   },
+   {
+    "ref": 53,
+    "nome": "Cabo de força"
+   },
+   {
+    "ref": 54,
+    "nome": "Torneira"
+   },
+   {
+    "ref": 55,
+    "nome": "Porca sextavada de plástico"
+   }
+  ]
+ },
+ {
+  "slug": "politriz-mt01",
+  "nome": "Politriz Elétrica Úmido",
+  "modelo": "MT-01",
+  "img": "/pecas/politriz-mt01.svg",
+  "w": 3168,
+  "h": 2610,
+  "pecas": [
+   {
+    "ref": 1,
+    "nome": "Eixo",
+    "qtd": 1
+   },
+   {
+    "ref": 2,
+    "nome": "Chaveta (4x4x14)",
+    "qtd": 1
+   },
+   {
+    "ref": 3,
+    "nome": "Parafuso M5x14",
+    "qtd": 4
+   },
+   {
+    "ref": 4,
+    "nome": "Retentor",
+    "qtd": 1
+   },
+   {
+    "ref": 5,
+    "nome": "Anel o’ ring",
+    "qtd": 1
+   },
+   {
+    "ref": 6,
+    "nome": "Retentor (Ø35x Ø21x5)",
+    "qtd": 1
+   },
+   {
+    "ref": 7,
+    "nome": "Rolamento 6203",
+    "qtd": 1
+   },
+   {
+    "ref": 8,
+    "nome": "Parafuso M5x16",
+    "qtd": 4
+   },
+   {
+    "ref": 9,
+    "nome": "Mancal",
+    "qtd": 1
+   },
+   {
+    "ref": 10,
+    "nome": "Engrenagem",
+    "qtd": 1
+   },
+   {
+    "ref": 11,
+    "nome": "Anel de retenção (14)/trava",
+    "qtd": 1
+   },
+   {
+    "ref": 12,
+    "nome": "Rolamento de agulha HK 1212",
+    "qtd": 1
+   },
+   {
+    "ref": 13,
+    "nome": "Retentor",
+    "qtd": 2
+   },
+   {
+    "ref": 14,
+    "nome": "Anel o’ ring",
+    "qtd": 1
+   },
+   {
+    "ref": 15,
+    "nome": "Injeção de água",
+    "qtd": 1
+   },
+   {
+    "ref": 16,
+    "nome": "Parafuso M4x14",
+    "qtd": 2
+   },
+   {
+    "ref": 17,
+    "nome": "Parafuso ST4,8x30",
+    "qtd": 4
+   },
+   {
+    "ref": 18,
+    "nome": "Caixa de engrenagem",
+    "qtd": 1
+   },
+   {
+    "ref": 19,
+    "nome": "Porca M8",
+    "qtd": 1
+   },
+   {
+    "ref": 20,
+    "nome": "Pinhão",
+    "qtd": 1
+   },
+   {
+    "ref": 21,
+    "nome": "Rolamento 6201",
+    "qtd": 1
+   },
+   {
+    "ref": 22,
+    "nome": "Arruela (Ø12x Ø23)",
+    "qtd": 1
+   },
+   {
+    "ref": 23,
+    "nome": "Mancal",
+    "qtd": 1
+   },
+   {
+    "ref": 24,
+    "nome": "Torneira",
+    "qtd": 1
+   },
+   {
+    "ref": 25,
+    "nome": "Rotor",
+    "qtd": 1
+   },
+   {
+    "ref": 26,
+    "nome": "Protetor do rolamento (Ø8)",
+    "qtd": 1
+   },
+   {
+    "ref": 27,
+    "nome": "Rolamento 608",
+    "qtd": 1
+   },
+   {
+    "ref": 28,
+    "nome": "Defletor de ar",
+    "qtd": 1
+   },
+   {
+    "ref": 29,
+    "nome": "Parafuso ST4,8x70",
+    "qtd": 2
+   },
+   {
+    "ref": 30,
+    "nome": "Estator",
+    "qtd": 1
+   },
+   {
+    "ref": 31,
+    "nome": "Punho direito",
+    "qtd": 1
+   },
+   {
+    "ref": 32,
+    "nome": "Módulo eletrônico",
+    "qtd": 1
+   },
+   {
+    "ref": 33,
+    "nome": "Caixa de campo",
+    "qtd": 1
+   },
+   {
+    "ref": 34,
+    "nome": "Capacitor (0,22 µF)",
+    "qtd": 1
+   },
+   {
+    "ref": 35,
+    "nome": "Interruptor",
+    "qtd": 1
+   },
+   {
+    "ref": 36,
+    "nome": "Protetor do cabo",
+    "qtd": 1
+   },
+   {
+    "ref": 37,
+    "nome": "Cabo (2x0,75mm)",
+    "qtd": 1
+   },
+   {
+    "ref": 38,
+    "nome": "Fixador do cabo",
+    "qtd": 1
+   },
+   {
+    "ref": 39,
+    "nome": "Parafuso ST3,9x14",
+    "qtd": 2
+   },
+   {
+    "ref": 40,
+    "nome": "Punho esquerdo",
+    "qtd": 1
+   },
+   {
+    "ref": 41,
+    "nome": "Parafuso ST3,9x18",
+    "qtd": 4
+   },
+   {
+    "ref": 42,
+    "nome": "Tampa da porta escova",
+    "qtd": 2
+   },
+   {
+    "ref": 43,
+    "nome": "Escova de carvão TS050814-A",
+    "qtd": 2
+   },
+   {
+    "ref": 44,
+    "nome": "Porta escova",
+    "qtd": 2
+   },
+   {
+    "ref": 45,
+    "nome": "Etiqueta",
+    "qtd": 1
+   },
+   {
+    "ref": 46,
+    "nome": "Etiqueta",
+    "qtd": 1
+   }
+  ]
+ },
+ {
+  "slug": "politriz-pneumatica",
+  "nome": "Politriz Pneumática",
+  "modelo": "PP-MT-023",
+  "img": "/pecas/politriz-pneumatica.svg",
+  "w": 5529,
+  "h": 2733,
+  "pecas": [
+   {
+    "ref": 1,
+    "nome": "Carcaça",
+    "cod": "IT941"
+   },
+   {
+    "ref": 2,
+    "nome": "Retentor",
+    "cod": "IT942"
+   },
+   {
+    "ref": 3,
+    "nome": "Anel de vedação",
+    "cod": "IT943"
+   },
+   {
+    "ref": 4,
+    "nome": "Base de entrada da água",
+    "cod": "IT944"
+   },
+   {
+    "ref": 5,
+    "nome": "Parafuso*3",
+    "cod": "IT945"
+   },
+   {
+    "ref": 6,
+    "nome": "Anel de vedação 8*2",
+    "cod": "IT946"
+   },
+   {
+    "ref": 7,
+    "nome": "Parafuso da entrada de água",
+    "cod": "IT947"
+   },
+   {
+    "ref": 8,
+    "nome": "Tubo de água",
+    "cod": "IT948"
+   },
+   {
+    "ref": 9,
+    "nome": "Mola",
+    "cod": "IT949"
+   },
+   {
+    "ref": 10,
+    "nome": "Máscara do escape",
+    "cod": "IT950"
+   },
+   {
+    "ref": 11,
+    "nome": "Redutor de ruídos",
+    "cod": "IT951"
+   },
+   {
+    "ref": 12,
+    "nome": "Engrenagem pequena",
+    "cod": "IT952"
+   },
+   {
+    "ref": 13,
+    "nome": "Anel de pressão",
+    "cod": "IT953"
+   },
+   {
+    "ref": 15,
+    "nome": "Anel de regulação",
+    "cod": "IT955"
+   },
+   {
+    "ref": 16,
+    "nome": "Rolamento 629",
+    "cod": "IT954"
+   },
+   {
+    "ref": 17,
+    "nome": "Tampa frontal do cilindro",
+    "cod": "IT956"
+   },
+   {
+    "ref": 18,
+    "nome": "Calço da engrenagem",
+    "cod": "IT957"
+   },
+   {
+    "ref": 19,
+    "nome": "Chaveta do rotor",
+    "cod": "IT958"
+   },
+   {
+    "ref": 20,
+    "nome": "Guia do rotor",
+    "cod": "IT959"
+   },
+   {
+    "ref": 21,
+    "nome": "Rotor",
+    "cod": "IT960"
+   },
+   {
+    "ref": 22,
+    "nome": "Corpo do cilindro",
+    "cod": "IT961"
+   },
+   {
+    "ref": 23,
+    "nome": "Tampa traseira do cilindro",
+    "cod": "IT962"
+   },
+   {
+    "ref": 24,
+    "nome": "Anel de vedação 36*2",
+    "cod": "IT963"
+   },
+   {
+    "ref": 25,
+    "nome": "Capa do interruptor",
+    "cod": "IT964"
+   },
+   {
+    "ref": 26,
+    "nome": "Haste da válvula",
+    "cod": "IT965"
+   },
+   {
+    "ref": 27,
+    "nome": "Palhetas",
+    "cod": "IT966"
+   },
+   {
+    "ref": 28,
+    "nome": "Anel de vedação 32*2",
+    "cod": "IT967"
+   },
+   {
+    "ref": 29,
+    "nome": "Pino",
+    "cod": "IT968"
+   },
+   {
+    "ref": 30,
+    "nome": "Anel de vedação 44*2",
+    "cod": "IT970"
+   },
+   {
+    "ref": 31,
+    "nome": "Rolamento 608",
+    "cod": "IT969"
+   },
+   {
+    "ref": 32,
+    "nome": "Tampa do rolamento 608",
+    "cod": "IT971"
+   },
+   {
+    "ref": 33,
+    "nome": "Anel de retenção",
+    "cod": "IT972"
+   },
+   {
+    "ref": 34,
+    "nome": "Luva da válvula",
+    "cod": "IT973"
+   },
+   {
+    "ref": 35,
+    "nome": "Rolamento 608",
+    "cod": "IT969"
+   },
+   {
+    "ref": 36,
+    "nome": "Torneira",
+    "cod": "IT974"
+   },
+   {
+    "ref": 37,
+    "nome": "Anel de vedação 8*2",
+    "cod": "IT975"
+   },
+   {
+    "ref": 38,
+    "nome": "Suporte de metal",
+    "cod": "IT976"
+   },
+   {
+    "ref": 39,
+    "nome": "Porca da válvula",
+    "cod": "IT977"
+   },
+   {
+    "ref": 40,
+    "nome": "Porca",
+    "cod": "IT978"
+   },
+   {
+    "ref": 41,
+    "nome": "Engrenagem grande",
+    "cod": "IT979"
+   },
+   {
+    "ref": 42,
+    "nome": "Eixo",
+    "cod": "IT981"
+   },
+   {
+    "ref": 44,
+    "nome": "Retentor",
+    "cod": "IT982"
+   },
+   {
+    "ref": 45,
+    "nome": "Base do conector",
+    "cod": "IT983"
+   },
+   {
+    "ref": 46,
+    "nome": "Conector da mangueira de água",
+    "cod": "IT984"
+   },
+   {
+    "ref": 48,
+    "nome": "Porca",
+    "cod": "IT985"
+   },
+   {
+    "ref": 49,
+    "nome": "Suporte do rebolo",
+    "cod": "IT986"
+   },
+   {
+    "ref": 50,
+    "nome": "Luva de compressão",
+    "cod": "IT988"
+   },
+   {
+    "ref": 51,
+    "nome": "Anel de vedação 50*2",
+    "cod": "IT989"
+   },
+   {
+    "ref": 52,
+    "nome": "Chaveta do eixo",
+    "cod": "IT990"
+   },
+   {
+    "ref": 53,
+    "nome": "Empunhadura",
+    "cod": "IT991"
+   }
+  ]
+ },
+ {
+  "slug": "esmerilhadeira",
+  "nome": "Esmerilhadeira Angular",
+  "modelo": "EA-MT-025",
+  "img": "/pecas/esmerilhadeira.svg",
+  "w": 2172,
+  "h": 2331,
+  "pecas": [
+   {
+    "ref": 1,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 2,
+    "nome": "Tampa da mola"
+   },
+   {
+    "ref": 3,
+    "nome": "Mola"
+   },
+   {
+    "ref": 4,
+    "nome": "Anel de vedação"
+   },
+   {
+    "ref": 5,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 6,
+    "nome": "Pinhão"
+   },
+   {
+    "ref": 7,
+    "nome": "Rolamento 608"
+   },
+   {
+    "ref": 8,
+    "nome": "Placa do rolamento 608"
+   },
+   {
+    "ref": 9,
+    "nome": "Rotor"
+   },
+   {
+    "ref": 10,
+    "nome": "Porta do rolamento 607"
+   },
+   {
+    "ref": 11,
+    "nome": "Rolamento 607"
+   },
+   {
+    "ref": 12,
+    "nome": "Capa do rolamento 607"
+   },
+   {
+    "ref": 13,
+    "nome": "Defletor de ar"
+   },
+   {
+    "ref": 14,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 15,
+    "nome": "Estator"
+   },
+   {
+    "ref": 16,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 17,
+    "nome": "Pino"
+   },
+   {
+    "ref": 18,
+    "nome": "Anel de vedação"
+   },
+   {
+    "ref": 19,
+    "nome": "Pino de travamento"
+   },
+   {
+    "ref": 20,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 21,
+    "nome": "Escova de carvão"
+   },
+   {
+    "ref": 22,
+    "nome": "Porta escova"
+   },
+   {
+    "ref": 23,
+    "nome": "Mola helicoidal"
+   },
+   {
+    "ref": 24,
+    "nome": "Acionador / Gatilho"
+   },
+   {
+    "ref": 25,
+    "nome": "Interruptor"
+   },
+   {
+    "ref": 26,
+    "nome": "Fixador do cabo"
+   },
+   {
+    "ref": 27,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 28,
+    "nome": "Protetor do cabo"
+   },
+   {
+    "ref": 29,
+    "nome": "Tampa da carcaça"
+   },
+   {
+    "ref": 30,
+    "nome": "Filtro direito"
+   },
+   {
+    "ref": 31,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 32,
+    "nome": "Haste de tração do gatilho"
+   },
+   {
+    "ref": 33,
+    "nome": "Filtro esquerdo"
+   },
+   {
+    "ref": 34,
+    "nome": "Cabo de força"
+   },
+   {
+    "ref": 35,
+    "nome": "Caixa da engrenagem"
+   },
+   {
+    "ref": 36,
+    "nome": "Rolamento agulha"
+   },
+   {
+    "ref": 37,
+    "nome": "Engrenagem"
+   },
+   {
+    "ref": 38,
+    "nome": "Anel de pressão"
+   },
+   {
+    "ref": 39,
+    "nome": "Rolamento 6201"
+   },
+   {
+    "ref": 40,
+    "nome": "Anel de lã"
+   },
+   {
+    "ref": 41,
+    "nome": "Anel de vedação"
+   },
+   {
+    "ref": 42,
+    "nome": "Mancal"
+   },
+   {
+    "ref": 43,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 44,
+    "nome": "Eixo"
+   },
+   {
+    "ref": 45,
+    "nome": "Porta pó rolamento 6201"
+   },
+   {
+    "ref": 46,
+    "nome": "Parafuso"
+   },
+   {
+    "ref": 47,
+    "nome": "Placa de proteção"
+   },
+   {
+    "ref": 48,
+    "nome": "Flange interna"
+   },
+   {
+    "ref": 50,
+    "nome": "Flange externa"
+   },
+   {
+    "ref": 51,
+    "nome": "Caixa de campo"
+   }
+  ]
+ }
+]

@@ -1,0 +1,6 @@
+# pasta gerada para upload manual (npx vercel) — recriada por: python3 src/build.py
+deploy/
+.vercel/
+.DS_Store
+__pycache__/
+*.pyc

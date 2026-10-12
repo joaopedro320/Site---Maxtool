@@ -1,0 +1,73 @@
+  <section class="section on-paper pecas" id="pecas" aria-label="Vista explodida e lista de peças">
+    <div class="container">
+      <div class="maquina-tabs" id="maquina-tabs" role="tablist" aria-label="Escolha a máquina"></div>
+
+      <div class="pecas-ui">
+        <div class="vista" id="vista" aria-label="Vista explodida — arraste para mover, use os botões ou a roda do mouse para zoom">
+          <div class="vista-stage" id="vista-stage"><img id="vista-img" alt="" draggable="false"></div>
+          <div class="vista-loading" id="vista-loading">Carregando vista…</div>
+          <div class="vista-ctrl">
+            <button type="button" data-zoom="in" aria-label="Aproximar">+</button>
+            <button type="button" data-zoom="out" aria-label="Afastar">−</button>
+            <button type="button" data-zoom="reset" aria-label="Centralizar">⟲</button>
+          </div>
+          <p class="vista-hint">Arraste para mover · zoom para inspecionar · o número no desenho é o nº da lista</p>
+        </div>
+        <div class="pecas-lista">
+          <div class="pecas-top">
+            <label class="sr-only" for="busca-peca">Procurar peça</label>
+            <input id="busca-peca" type="search" placeholder="Procurar peça (nome ou nº)" autocomplete="off">
+            <a class="btn btn-dark btn-sm" id="baixar-pdf" href="#" target="_blank" rel="noopener"><svg><use href="#i-download"/></svg> PDF</a>
+          </div>
+          <div class="pecas-scroll">
+            <table>
+              <thead><tr><th>Nº</th><th>Peça</th><th id="col-extra"></th></tr></thead>
+              <tbody id="pecas-corpo"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="garantia">
+        <div class="garantia-head">
+          <p class="eyebrow">Garantia</p>
+          <h3>Máquina parada é prejuízo.<br>Você tem dois caminhos.</h3>
+          <p>Toda máquina Maxtool tem garantia contra defeitos de fabricação. Nos dois caminhos, tenha a nota fiscal em mãos e fale primeiro com a gente — orientamos o processo e agilizamos a liberação da peça.</p>
+          <a class="btn btn-red" href="https://wa.me/5527992019026?text=Ol%C3%A1!%20Preciso%20acionar%20a%20garantia%20da%20minha%20m%C3%A1quina%20Maxtool." target="_blank" rel="noopener" data-track="whatsapp_garantia"><svg><use href="#i-wa"/></svg> Acionar garantia no WhatsApp</a>
+        </div>
+        <div class="garantia-opcoes">
+          <article class="reveal">
+            <span class="num">01</span>
+            <h4>Na oficina perto de você</h4>
+            <p>Leve a máquina a uma oficina que conserta esse tipo de equipamento. O mecânico identifica o defeito e avalia a causa:</p>
+            <ul>
+              <li><b>Defeito de fabricação?</b> A Maxtool envia a peça sem custo e paga a mão de obra da oficina.</li>
+              <li><b>Mau uso?</b> Peça e mão de obra ficam por conta do cliente.</li>
+            </ul>
+          </article>
+          <article class="reveal">
+            <span class="num">02</span>
+            <h4>Direto com a Maxtool</h4>
+            <p>Prefere não procurar oficina? Envie a máquina para a gente: levamos à nossa oficina e cuidamos de todo o processo — avaliação, reparo e retorno.</p>
+          </article>
+        </div>
+      </div>
+
+      <details class="oficina">
+        <summary><span><b>Sua oficina conserta máquinas Maxtool?</b> Cadastre-se como oficina parceira e entre no nosso radar de indicações.</span><svg><use href="#i-arrow"/></svg></summary>
+        <form class="form" id="form-oficina" data-endpoint="/api/oficina-lead" data-lead="oficina" data-wa="Olá! Tenho uma oficina e quero ser oficina parceira Maxtool." novalidate>
+          <div class="grid-2">
+            <label>Seu nome*<input name="nome" required autocomplete="name"></label>
+            <label>Nome da oficina*<input name="oficina" required></label>
+            <label>Cidade / Estado*<input name="cidade" required placeholder="Ex.: Vitória / ES"></label>
+            <label>WhatsApp*<input name="whatsapp" required inputmode="tel" data-mask="tel" placeholder="(27) 99999-0000"></label>
+            <label class="span-2">E-mail*<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="check"><input type="checkbox" name="aceita_novidades" checked> Quero receber novidades e diretrizes técnicas da Maxtool pelo WhatsApp.</label>
+          <button class="btn btn-red" type="submit">Cadastrar minha oficina</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </details>
+    </div>
+  </section>

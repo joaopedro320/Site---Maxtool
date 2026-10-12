@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0b0c0e"/>
+  <!-- letra M oficial do logotipo Maxtool (extraída de maxtool.svg) -->
+  <path
+    transform="translate(4 7.55) scale(0.891) translate(46.678 0) scale(1 -1)"
+    d="M0 0-15.254-26.421-30.509 0H-46.678V-14.369-54.916H-30.509V-25.543L-15.254-49.968 0-25.543V-54.916H16.17V0Z"
+    fill="#e4213a"/>
+</svg>

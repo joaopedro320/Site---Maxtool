@@ -1,0 +1,25 @@
+  <section class="section produtos-grid-sec" id="destaques" aria-labelledby="destaques-title">
+    <div class="container">
+      <div class="split-head">
+        <div>
+          <p class="eyebrow">Destaques da linha</p>
+          <h2 id="destaques-title">Peças em close.</h2>
+        </div>
+        <p class="lead">Filtre por etapa ou nível e toque em uma peça para ver as especificações. A linha completa, com mais de 1.000 itens, está no catálogo 2026.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar produtos">
+        <button type="button" class="filtro is-on" data-filtro="todos">Todos</button>
+        <button type="button" class="filtro" data-filtro="etapa:0">Corte</button>
+        <button type="button" class="filtro" data-filtro="etapa:1">Desbaste</button>
+        <button type="button" class="filtro" data-filtro="etapa:2">Polimento</button>
+        <button type="button" class="filtro" data-filtro="etapa:3">Acabamento</button>
+        <button type="button" class="filtro" data-filtro="material:porcelanato">Porcelanato</button>
+        <button type="button" class="filtro" data-filtro="material:quartzito">Quartzito</button>
+        <button type="button" class="filtro" data-filtro="material:ultracompactos">Ultracompactos</button>
+        <button type="button" class="filtro" data-filtro="nivel:Premium">Premium</button>
+        <label class="busca-prod"><span class="sr-only">Buscar produto</span><input type="search" id="busca-prod" placeholder="Buscar: disco, lixa, 115 mm…" autocomplete="off"></label>
+      </div>
+      <p class="busca-vazia" id="busca-vazia" hidden>Nenhum destaque com esse termo. A linha completa tem +1.000 itens — <a href="/catalogo/maxtool-catalogo-2026-leve.pdf" target="_blank" rel="noopener">veja no catálogo</a> ou <a href="https://wa.me/5527992019026?text=Ol%C3%A1!%20Procuro%20um%20produto%20Maxtool." target="_blank" rel="noopener">pergunte no WhatsApp</a>.</p>
+      <div class="prod-grid" id="prod-grid" aria-live="polite">{{prod_grid}}</div>
+    </div>
+  </section>

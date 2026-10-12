@@ -1,0 +1,5 @@
+# não publicar código-fonte nem a pasta de upload manual
+src/
+deploy/
+README.md
+.gitignore

@@ -1,0 +1,95 @@
+  <section class="section revenda" id="revenda" aria-labelledby="revenda-title">
+    <div class="container revenda-inner">
+      <div class="revenda-copy">
+        <p class="eyebrow eyebrow--light">Para a sua revenda</p>
+        <h2 id="revenda-title">Leve a Maxtool<br>para a sua loja.</h2>
+        <p class="lead">Importadora e fornecedora de discos, lixas e ferramentas diamantadas para revendas de marmoraria. A marca que o marmorista já pede no balcão, com uma política de distribuição feita para durar. A Maxtool vende só para revendas — e protege a rede de quem é parceiro.</p>
+        <ul class="vantagens">
+          <li class="reveal"><b>Marca que gira</b><span>Presença forte junto ao marmorista, com embaixadores, eventos e conteúdo — a demanda chega na sua loja.</span></li>
+          <li class="reveal"><b>+1.000 itens</b><span>Linha completa do corte ao acabamento, em três níveis para todo perfil e ponto de preço.</span></li>
+          <li class="reveal"><b>Rede protegida</b><span>Vendemos só para lojista. Sem disputa com o seu cliente final.</span></li>
+          <li class="reveal"><b>Pronta entrega</b><span>Estoque dos principais produtos e envio por transportadora para todo o Brasil.</span></li>
+          <li class="reveal"><b>Pagamento a prazo</b><span>Condições conforme análise cadastral, volume, mix e histórico de compras.</span></li>
+          <li class="reveal"><b>Importação direta</b><span>Marca própria e fornecedores internacionais diretos: portfólio amplo e preço competitivo.</span></li>
+          <li class="reveal"><b>Max Tool Day na loja</b><span>Capacitação de marmoristas dentro da revenda para atrair clientes e girar estoque.</span></li>
+          <li class="reveal"><b>Peças e pós-venda</b><span>Peças de reposição e suporte em garantia — sua loja não fica sozinha com o cliente.</span></li>
+        </ul>
+        <div class="requisitos">
+          <h3>Quem pode ser revendedor</h3>
+          <ul>
+            <li><svg><use href="#i-check"/></svg> Revenda especializada, distribuidor, loja de ferramentas ou de materiais de construção</li>
+            <li><svg><use href="#i-check"/></svg> CNPJ com CNAE de revenda do ramo</li>
+            <li><svg><use href="#i-check"/></svg> Loja física ou histórico de vendas no segmento</li>
+            <li><svg><use href="#i-check"/></svg> Compromisso com pedidos recorrentes</li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="form form-revenda" id="form-revenda" data-endpoint="/api/revenda-lead" data-lead="revenda" data-wa="Olá! Quero ser um revendedor Maxtool." novalidate>
+        <div class="form-head">
+          <h3>Quero ser revendedor</h3>
+          <p>Leva 1 minuto. Comece com 4 campos — nossa equipe comercial retorna com a política completa e as condições para a sua região.</p>
+          <div class="steps" aria-hidden="true"><span class="on"></span><span></span></div>
+        </div>
+        <fieldset class="step is-on" data-step="1">
+          <legend class="sr-only">Sua loja</legend>
+          <div class="grid-2">
+            <label>Seu nome*<input name="nome" required autocomplete="name"></label>
+            <label>WhatsApp*<input name="whatsapp" required inputmode="tel" data-mask="tel" placeholder="(27) 99999-0000" autocomplete="tel"></label>
+            <label>Nome da loja*<input name="loja" required autocomplete="organization"></label>
+            <label>Cidade / Estado*<input name="cidade" required placeholder="Ex.: Goiânia / GO"></label>
+          </div>
+          <button class="btn btn-red btn-block" type="button" data-next>Continuar <svg><use href="#i-arrow"/></svg></button>
+        </fieldset>
+        <fieldset class="step" data-step="2">
+          <legend class="sr-only">Perfil da revenda</legend>
+          <div class="grid-2">
+            <label>CNPJ*<input name="cnpj" required inputmode="numeric" data-mask="cnpj" placeholder="00.000.000/0000-00"></label>
+            <label>E-mail*<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <div class="q">
+            <span class="q-label">Tipo de empresa*</span>
+            <div class="pills">
+              <label><input type="radio" name="tipo" value="revenda" required><span>Revenda especializada</span></label>
+              <label><input type="radio" name="tipo" value="distribuidor"><span>Distribuidor</span></label>
+              <label><input type="radio" name="tipo" value="ferramentas"><span>Loja de ferramentas</span></label>
+              <label><input type="radio" name="tipo" value="construcao"><span>Materiais de construção</span></label>
+            </div>
+          </div>
+          <div class="q">
+            <span class="q-label">Sua loja vende para marmorarias e marmoristas?*</span>
+            <div class="pills">
+              <label><input type="radio" name="perfil" value="principal" required><span>Sim, é o nosso foco</span></label>
+              <label><input type="radio" name="perfil" value="parte"><span>Sim, parte das vendas</span></label>
+              <label><input type="radio" name="perfil" value="nao"><span>Ainda não</span></label>
+            </div>
+          </div>
+          <div class="q">
+            <span class="q-label">Tem loja física?*</span>
+            <div class="pills">
+              <label><input type="radio" name="loja_fisica" value="sim" required><span>Sim</span></label>
+              <label><input type="radio" name="loja_fisica" value="online"><span>Só online</span></label>
+              <label><input type="radio" name="loja_fisica" value="abrindo"><span>Estou abrindo</span></label>
+            </div>
+          </div>
+          <div class="q">
+            <span class="q-label">Compra mensal média em ferramentas e abrasivos*</span>
+            <div class="pills">
+              <label><input type="radio" name="volume" value="ate-5k" required><span>Até R$ 5 mil</span></label>
+              <label><input type="radio" name="volume" value="5-20k"><span>R$ 5 a 20 mil</span></label>
+              <label><input type="radio" name="volume" value="20k+"><span>Acima de R$ 20 mil</span></label>
+            </div>
+          </div>
+          <label>Quais marcas você revende hoje? <small>(opcional)</small><input name="marcas"></label>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="check"><input type="checkbox" name="aceita_novidades" checked> Quero receber novidades e ofertas da Maxtool pelo WhatsApp.</label>
+          <div class="step-actions">
+            <button class="btn btn-ghost-dark" type="button" data-prev>Voltar</button>
+            <button class="btn btn-red" type="submit">Enviar cadastro <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <p class="fine">Seus dados são usados só para o contato comercial da Maxtool, conforme nossa <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+        </fieldset>
+        <p class="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
