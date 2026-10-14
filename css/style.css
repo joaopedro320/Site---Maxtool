@@ -201,8 +201,6 @@ p { margin: 0; }
 .spec-tag--1 { top: 4%; right: 4%; }
 .spec-tag--2 { top: 44%; right: -2%; }
 .spec-tag--3 { bottom: 2%; left: 4%; }
-.scroll-cue { position: absolute; left: 50%; bottom: 28px; width: 26px; height: 42px; border: 2px solid rgba(255,255,255,.35); border-radius: 14px; translate: -50% 0; }
-.scroll-cue span { position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; border-radius: 2px; background: var(--red); translate: -50% 0; animation: cue 1.8s infinite; }
 
 @keyframes spin { to { rotate: 360deg; } }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--red-glow); } 70% { box-shadow: 0 0 0 12px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
@@ -217,8 +215,7 @@ p { margin: 0; }
   .spec-tag--2 { right: 0; }
   .hero-chips li { padding-right: 18px; margin-right: 18px; }
   .hero-chips b { font-size: 32px; }
-  .scroll-cue { display: none; }
-}
+  }
 
 /* ---------- Marquee materiais ---------- */
 .materials { background: var(--red); color: #fff; transform: skewY(-2deg); margin: -30px 0 0; position: relative; z-index: 3; box-shadow: 0 20px 60px -20px var(--red-glow); }
