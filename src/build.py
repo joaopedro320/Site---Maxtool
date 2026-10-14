@@ -147,22 +147,32 @@ def guia_section():
         tabs.append(f'<button role="tab" id="tab-mat-{mid}" aria-controls="mat-{mid}" aria-selected="{sel}"{tabidx}>'
                     f'<svg aria-hidden="true"><use href="#{picto}"/></svg>{nome}</button>')
         code = GUIA_COD[mid]
-        linhas = []
+        grupos = []  # (etapa, chave, id_etapa, itens)
         for etapa, filtro, eid in GUIA_LINHAS:
             itens = ordenar([pr for pr in PRODUTOS if code in pr['mats'] and filtro(pr)])
-            if not itens:
-                continue
-            chips = []
-            for pr in itens[:6]:
-                chips.append(f'<button class="guia-prod" type="button" data-id="{pr["id"]}">{pic(pr)}'
-                             f'<span><b>{esc(pr["nome"])}</b><small>{esc(pr["spec"])}</small></span>{tag_nivel(pr)}</button>')
-            if len(itens) > 6:
-                chips.append(f'<a class="guia-mais" href="/produtos/?material={code}&amp;etapa={eid}#destaques">+{len(itens) - 6}<small>ver todos</small></a>')
-            linhas.append(f'<div class="guia-row"><h4>{etapa}<small>{len(itens)} {"produto" if len(itens) == 1 else "produtos"}</small></h4><div class="guia-itens">{"".join(chips)}</div></div>')
+            if itens:
+                grupos.append((etapa, slug(etapa), eid, itens))
+        # barra de filtros: etapa (abas) + nível
+        etapa_btns = ''.join(
+            f'<button type="button" class="gf-etapa{" is-on" if k == 0 else ""}" data-etapa="{chave}" data-eid="{eid}" aria-pressed="{"true" if k == 0 else "false"}">'
+            f'{etapa}<i>{len(itens)}</i></button>' for k, (etapa, chave, eid, itens) in enumerate(grupos))
+        niveis_mat = [n for n in ('Premium', 'Pro', 'Std') if any(pr['nivel'] == n for _, _, _, it in grupos for pr in it)]
+        nivel_btns = '<button type="button" class="gf-nivel is-on" data-nivel="" aria-pressed="true">Todos</button>' + ''.join(
+            f'<button type="button" class="gf-nivel is-{n.lower()}" data-nivel="{n}" aria-pressed="false">{n}</button>' for n in niveis_mat)
+        cards = ''.join(
+            f'<button class="guia-card" type="button" data-id="{pr["id"]}" data-etapa="{chave}" data-nivel="{pr["nivel"] or ""}"{"" if k == 0 else " hidden"}>'
+            f'<span class="gc-img">{pic(pr)}</span><span class="gc-txt"><b>{esc(pr["nome"])}</b><small>{esc(pr["spec"])}</small></span>{tag_nivel(pr)}</button>'
+            for k, (etapa, chave, eid, itens) in enumerate(grupos) for pr in itens)
+        corpo = f'''<div class="guia-filtros" role="group" aria-label="Filtrar produtos para {nome}">
+            <div class="gf-grupo gf-etapas">{etapa_btns}</div>
+            {f'<div class="gf-grupo gf-niveis"><span>Nível</span>{nivel_btns}</div>' if niveis_mat else ''}
+          </div>
+          <div class="guia-grid" data-material="{code}">{cards}</div>
+          <p class="guia-vazio" hidden>Nenhum produto desse nível nesta etapa. <button type="button" class="gf-reset">Ver todos os níveis</button></p>
+          <a class="guia-vertodos" href="/produtos/?material={code}#destaques" hidden>Ver todos os <b></b> produtos <svg><use href="#i-arrow"/></svg></a>'''
         pergunta = f'Olá! Qual ferramenta Maxtool usar para {nome}?'
         wa = 'https://wa.me/' + E['whatsapp_digits'] + '?text=' + quote(pergunta)
         desafio = esc(m['desafio'])
-        corpo = ''.join(linhas)
         panels.append(f"""
         <div class="guia-panel" id="mat-{mid}" role="tabpanel" aria-labelledby="tab-mat-{mid}"{hidden}>
           <div class="guia-panel-head">

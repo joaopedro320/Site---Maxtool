@@ -147,6 +147,41 @@
     if ([...params.keys()].length) aplicar(false);
   }
 
+  // guia: filtros por etapa e nível dentro de cada material
+  const LIMITE_GUIA = 9;
+  $$('.guia-panel').forEach((panel) => {
+    const gridG = $('.guia-grid', panel);
+    if (!gridG) return;
+    const cardsG = $$('.guia-card', gridG);
+    const vertodos = $('.guia-vertodos', panel);
+    const vazio = $('.guia-vazio', panel);
+    const code = gridG.dataset.material;
+    const st = { etapa: $('.gf-etapa.is-on', panel)?.dataset.etapa || '', eid: $('.gf-etapa.is-on', panel)?.dataset.eid || '', nivel: '' };
+    const aplicar = (animar) => {
+      const match = cardsG.filter((c) => c.dataset.etapa === st.etapa && (!st.nivel || c.dataset.nivel === st.nivel));
+      cardsG.forEach((c) => { c.hidden = true; });
+      match.slice(0, LIMITE_GUIA).forEach((c) => { c.hidden = false; });
+      vazio.hidden = match.length > 0;
+      vertodos.hidden = match.length <= LIMITE_GUIA;
+      if (match.length > LIMITE_GUIA) {
+        $('b', vertodos).textContent = match.length;
+        vertodos.href = `/produtos/?material=${code}&etapa=${st.eid}${st.nivel ? '&nivel=' + st.nivel : ''}#destaques`;
+      }
+      if (animar && window.gsap && !reduced) gsap.fromTo(match.slice(0, LIMITE_GUIA), { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: .4, stagger: .03, ease: 'power3.out' });
+    };
+    const marcar = (sel, btn) => $$(sel, panel).forEach((x) => { x.classList.toggle('is-on', x === btn); x.setAttribute('aria-pressed', String(x === btn)); });
+    $$('.gf-etapa', panel).forEach((btn) => btn.addEventListener('click', () => {
+      st.etapa = btn.dataset.etapa; st.eid = btn.dataset.eid; marcar('.gf-etapa', btn); aplicar(true);
+      track('filter_guia', { material: code, etapa: st.etapa });
+    }));
+    $$('.gf-nivel', panel).forEach((btn) => btn.addEventListener('click', () => {
+      st.nivel = btn.dataset.nivel; marcar('.gf-nivel', btn); aplicar(true);
+      track('filter_guia', { material: code, nivel: st.nivel || 'todos' });
+    }));
+    $('.gf-reset', panel)?.addEventListener('click', () => { st.nivel = ''; marcar('.gf-nivel', $('.gf-nivel', panel)); aplicar(true); });
+    aplicar(false);
+  });
+
   // guia "a ferramenta certa para cada material"
   const guiaTabs = $$('.guia-tabs [role="tab"]');
   if (guiaTabs.length) {
@@ -155,7 +190,7 @@
       guiaTabs.forEach((t, k) => { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
       guiaPanels.forEach((pn, k) => { pn.hidden = k !== i; });
       if (focus) guiaTabs[i].focus();
-      if (window.gsap && !reduced) gsap.from($$('.guia-panel-head, .guia-row, .guia-acts', guiaPanels[i]), { y: 20, opacity: 0, duration: .45, stagger: .06, ease: 'power3.out' });
+      if (window.gsap && !reduced) gsap.from($$('.guia-panel-head, .guia-filtros, .guia-card:not([hidden]), .guia-acts', guiaPanels[i]), { y: 20, opacity: 0, duration: .45, stagger: .06, ease: 'power3.out' });
       track('select_content', { content_type: 'material', item_id: guiaTabs[i].textContent.trim() });
     };
     guiaTabs.forEach((t, i) => {

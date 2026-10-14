@@ -1039,3 +1039,41 @@ main > .onde:first-child { min-height: 92vh; display: flex; align-items: center;
 .tier h3, .tier p, .tier ul, .tier .tag, .tier-meter { position: relative; z-index: 1; }
 .tier p { max-width: 30ch; }
 @media (max-width: 900px) { .tier-disc { width: 170px; right: -40px; top: -40px; } }
+
+/* guia por material — barra de filtros + grade */
+.guia-filtros { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; align-items: center; padding: 18px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); margin-bottom: 20px; }
+.gf-grupo { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.gf-niveis > span { font-family: var(--f-cond); font-weight: 700; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--steel-mid); margin-right: 4px; }
+.gf-etapa, .gf-nivel { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 30px; border: 1.5px solid var(--line-dark); background: transparent; color: #cfd5dc; font-family: var(--f-cond); font-weight: 700; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; transition: background .25s, border-color .25s, color .25s; }
+.gf-etapa i { font-style: normal; font-size: 12px; min-width: 22px; height: 22px; display: grid; place-items: center; border-radius: 11px; background: rgba(255,255,255,.08); color: var(--steel); padding: 0 6px; }
+.gf-etapa:hover, .gf-nivel:hover { border-color: #fff; color: #fff; }
+.gf-etapa.is-on { background: var(--red); border-color: var(--red); color: #fff; }
+.gf-etapa.is-on i { background: rgba(0,0,0,.25); color: #fff; }
+.gf-nivel { height: 34px; padding: 0 12px; font-size: 13px; }
+.gf-nivel.is-on { background: #fff; border-color: #fff; color: var(--ink); }
+.gf-nivel.is-premium.is-on { background: #000; border-color: #fff; color: #fff; }
+.gf-nivel.is-pro.is-on { background: var(--steel); border-color: var(--steel); color: var(--ink); }
+.gf-nivel.is-std.is-on { background: var(--red); border-color: var(--red); color: #fff; }
+.guia-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.guia-card { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 12px; padding: 10px 12px 10px 10px; background: var(--ink-3); border: 1px solid var(--line-dark); border-radius: 6px; color: #fff; text-align: left; min-height: 84px; transition: border-color .3s, transform .3s var(--ease); }
+.guia-card[hidden] { display: none; }
+.guia-card:hover { border-color: var(--red); transform: translateY(-3px); }
+.gc-img { width: 64px; height: 64px; display: grid; place-items: center; }
+.gc-img picture { display: contents; }
+.gc-img img { max-width: 64px; max-height: 64px; width: auto; height: auto; object-fit: contain; }
+.gc-txt b { display: block; font-family: var(--f-cond); font-size: 17px; line-height: 1.15; }
+.gc-txt small { display: block; color: var(--steel); font-size: 14px; margin-top: 3px; }
+.guia-card .tag { align-self: start; font-size: 11px; padding: 4px 8px; }
+.guia-vazio { color: var(--steel); padding: 14px 0; }
+.gf-reset { background: none; border: 0; color: var(--red); font-weight: 600; text-decoration: underline; padding: 0; }
+.guia-vertodos { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-family: var(--f-cond); font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; font-size: 15px; color: var(--red); text-decoration: none; }
+.guia-vertodos[hidden] { display: none; }
+.guia-vertodos svg { width: 16px; height: 16px; transition: transform .3s var(--ease); }
+.guia-vertodos:hover svg { transform: translateX(5px); }
+@media (max-width: 600px) {
+  .guia-filtros { flex-direction: column; align-items: stretch; }
+  .gf-etapas { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .gf-etapas::-webkit-scrollbar { display: none; }
+  .gf-etapa { flex: none; }
+  .guia-grid { grid-template-columns: 1fr; }
+}
