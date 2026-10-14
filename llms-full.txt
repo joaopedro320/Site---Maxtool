@@ -42,20 +42,20 @@ Fatos principais:
 ## A ferramenta certa para cada material
 ### Mármore e Granito
 Os materiais mais trabalhados da marmoraria: corte reto na bancada, borda bem acabada e brilho uniforme.
-- Corte: Serra Mármore Maxtool (1.550 W · 12.000 rpm · Ø110 mm), Discos para granito, Discos para mármore, Discos silenciosos, Discos de grande diâmetro
-- Desbaste: Prato de Desbaste DDD (Ø115 mm · grão #60)
+- Corte: Serra Mármore SM-MT-023 (SM-MT-023 · 12.000 rpm), Discos para granito, Discos para mármore, Discos silenciosos, Discos de grande diâmetro
+- Desbaste: Prato de Desbaste DDD (Ø115 mm · #60)
 - Polimento: Lixas diamantadas, Lixas resinadas, Feltros para polimento, Politrizes elétricas e pneumáticas
-- Acabamento: Escova Tynex Diamantada (M14 · grão #24), Escovas diamantadas
+- Acabamento: escova-tynex, Escovas diamantadas
 
 ### Porcelanato
 Material duro e quebradiço, cada vez em formatos maiores. O maior medo é lascar a borda no corte.
-- Corte: Disco de Corte Mesh (Ø115 mm · porcelanato), Discos para porcelanato
+- Corte: disco-mesh, Discos para porcelanato
 - Furo: Brocas e coroas diamantadas
 - Polimento: Lixas diamantadas, Lixas de 3 passos
 
 ### Quartzito
 Um dos materiais mais duros e abrasivos: consome ferramenta rápido e exige segmento resistente.
-- Corte: Serra Quartzito Silenciosa (350 × 50 × 20 × 3,2 mm), Discos silenciosos
+- Corte: serra-quartzito, Discos silenciosos
 - Polimento: Lixas diamantadas, Ferramentas diamantadas para polimento
 
 ### Nanoglass
@@ -65,13 +65,13 @@ Superfície vitrificada e sensível: pede corte controlado e polimento cuidadoso
 
 ### Ultracompactos
 Chapas densas e de alto valor: um erro no corte custa a peça inteira.
-- Corte: Disco Ultracompacto (Ø120 mm · ultracompactos), Discos para ultracompactos
+- Corte: disco-ultracompacto, Discos para ultracompactos
 - Furo: Brocas e coroas diamantadas
 - Polimento: Lixas diamantadas
 
 ### Concreto e Granilite
 Superfícies de piso e bancada que pedem desbaste forte antes do acabamento.
-- Desbaste: Prato de Desbaste DDD (Ø115 mm · grão #60), Ferramentas HTC
+- Desbaste: Prato de Desbaste DDD (Ø115 mm · #60), Ferramentas HTC
 - Polimento: Ferramentas diamantadas para polimento, Lixas resinadas
 
 ### Erros comuns
@@ -86,72 +86,158 @@ Superfícies de piso e bancada que pedem desbaste forte antes do acabamento.
 - Polimento: Do grão grosso ao brilho: lixas diamantadas e polibordas para cada material. Categorias: Lixas Diamantadas SL · SLX · SLe · SLXe, Polibordas, Politrizes.
 - Acabamento: Texturas, detalhes e o toque final que valoriza a peça entregue. Categorias: Acabamento, Ferramentas Manuais, Acessórios.
 
-## Destaques da linha
-### Serra Mármore Maxtool
-- Categoria: Máquinas
-- Etapa: Corte
-- Modelo: SM-MT-023
-- Potência: 1.550 W
-- Rotação: 12.000 rpm
-- Disco: Ø110 mm
-- Descrição: A máquina de corte da bancada. Potência e rotação para cortar rocha e revestimento todo dia — com vista explodida e peças de reposição disponíveis no site.
+## Produtos do catálogo (130 itens no site; +1.000 no catálogo completo)
+### Discos de Corte (18)
+- Disco de Corte Contínuo — nível Premium. Diâmetro: 110 / 115 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 2,0 mm; materiais: Nanoglass, Mármore e Granito.
+- Disco de Corte Turbo Protegido — nível Premium. Diâmetro: 115 mm; Furo central: 20 mm; Altura do segmento: 8 mm; Espessura: 2,4 mm; materiais: Mármore e Granito.
+- Disco de Corte Curvo — nível Premium. Diâmetro: 115 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 2,2 mm; materiais: Mármore e Granito.
+- Disco de Corte Turbo Protegido Curvo — nível Premium. Diâmetro: 125 mm; Furo central: 20 mm; Altura do segmento: 7 mm; Espessura: 2,8 mm; materiais: Mármore e Granito.
+- Disco de Corte Turbo Narrow — nível Premium. Diâmetro: 110 / 115 / 125 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 2,0 mm (110) · 2,4 mm (115) · 2,2 mm (125); materiais: Mármore e Granito.
+- Disco de Corte Mesh — nível Premium. Diâmetro: 75 / 110 / 115 mm; Furo central: 8 mm (75) · 20 mm; Altura do segmento: 10 mm; Espessura: 1,4 mm (75) · 1,2 mm (110) · 1,4 mm (115); materiais: Porcelanato.
+- Disco de Corte Ultra Turbo — nível Premium. Diâmetro: 115 mm; Furo central: 20 mm; Altura do segmento: 15 mm; Espessura: 2,2 mm; materiais: Mármore e Granito.
+- Disco de Corte Ultracompactos — nível Premium. Diâmetro: 120 mm; Furo central: 20 mm; Altura do segmento: 11 mm; Espessura: 1,8 mm; materiais: Ultracompactos.
+- Disco de Corte Segmentado — nível Premium. Diâmetro: 110 / 115 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 2,0 mm; materiais: Mármore e Granito.
+- Disco de Corte Contínuo — nível Pro. Diâmetro: 110 / 115 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 1,2 / 1,3 mm; materiais: Nanoglass, Mármore e Granito.
+- Disco de Corte Protegido — nível Pro. Diâmetro: 115 mm; Furo central: 20 mm; Altura do segmento: 8 mm; Espessura: 2,4 mm; materiais: Mármore e Granito.
+- Disco de Corte Turbo — nível Pro. Diâmetro: 110 / 115 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 2,0 / 2,2 mm; materiais: Mármore e Granito.
+- Disco de Corte Turbo Narrow — nível Pro. Diâmetro: 110 / 115 mm; Furo central: 20 mm; Altura do segmento: 10 mm; Espessura: 1,8 / 2,0 mm; materiais: Mármore e Granito.
+- Disco de Corte Turbo Extra Fino — nível Pro. Diâmetro: 110 / 115 / 125 mm; Furo central: 20 mm; Altura do segmento: 8 / 10 mm; Espessura: 1,4 / 1,6 mm; materiais: Mármore e Granito, Porcelanato.
+- Disco de Corte Contínuo — nível Std. Diâmetro: 110 mm; Furo central: 20 mm; Altura do segmento: 8 mm; Espessura: 2,0 mm; materiais: Nanoglass, Mármore e Granito.
+- Disco de Corte Segmentado — nível Std. Diâmetro: 110 mm; Furo central: 20 mm; Altura do segmento: 8 mm; Espessura: 2,0 mm; materiais: Mármore e Granito.
+- Disco de Corte Turbo — nível Std. Diâmetro: 110 mm; Furo central: 20 mm; Altura do segmento: 8 mm; Espessura: 2,0 mm; materiais: Mármore e Granito.
+- Disco de Corte Multipropósito — nível Std. Diâmetro: 100 / 115 mm; Furo central: 22,23 mm; Altura do segmento: 10 mm; Espessura: 1,5 / 1,8 mm; materiais: Porcelanato.
 
-### Disco de Corte Mesh
-- Categoria: Discos de Corte
-- Nível: Premium
-- Etapa: Corte
-- Diâmetro: Ø115 mm
-- Furo: 20 mm
-- Segmento: 10 × 1,4 mm
-- Material: Porcelanato
-- Descrição: Borda mesh para corte fino e limpo em porcelanato, sem lascar a peça. Linha Premium para quem não aceita retrabalho.
+### Serras Diamantadas (12)
+- Serra Diamantada Porcelanato — nível Premium. Diâmetro: 250 / 300 / 350 mm; Furo central: 50 mm; Altura do segmento: 10 mm; Espessura: 2,2 / 2,4 / 2,6 mm; materiais: Porcelanato.
+- Serra Diamantada Ultracompactos — nível Premium. Diâmetro: 250 / 300 / 350 mm; Furo central: 60 – 50 mm; Altura do segmento: 8 mm (250) · 10 mm; Espessura: 2,2 / 2,6 / 3,2 mm; materiais: Quartzito, Ultracompactos.
+- Serra Diamantada Mesh — nível Premium. Diâmetro: 250 / 300 / 350 mm; Furo central: 50 mm; Altura do segmento: 10 mm; Espessura: 2,0 / 2,2 / 2,4 mm; materiais: Porcelanato.
+- Serra Diamantada Quartzito — nível Premium. Diâmetro: 250 / 300 / 350 mm; Furo central: 50 mm; Altura do segmento: 20 mm; Espessura: 3,2 mm; materiais: Quartzito.
+- Serra Diamantada Nanoglass — nível Premium. Diâmetro: 250 / 300 / 350 mm; Furo central: 50 mm; Altura do segmento: 10 mm; Espessura: 2,0 / 2,2 / 2,6 mm; materiais: Nanoglass, Ultracompactos.
+- Serra Diamantada Turbo Protegida — nível Premium. Diâmetro: 180 / 230 mm; Furo central: 25,4 mm; Altura do segmento: 8 mm; Espessura: 2,8 mm; materiais: Quartzito.
+- Serra Diamantada Tree-Step — nível Premium. Diâmetro: 250 / 350 mm; Furo central: 50 mm; Altura do segmento: 15 mm; Espessura: 3,6 mm; materiais: Mármore e Granito.
+- Serra Diamantada Silenciosa — nível Pro. Diâmetro: 350 mm; Furo central: 50 mm; Altura do segmento: 15 mm; Espessura: 3,2 mm; materiais: Mármore e Granito.
+- Serra Diamantada Silenciosa Tree-Step — nível Pro. Diâmetro: 250 / 350 mm; Furo central: 50 mm; Altura do segmento: 15 mm; Espessura: 3,6 mm; materiais: Mármore e Granito.
+- Serra Diamantada Ultracompacto — nível Pro. Diâmetro: 350 mm; Furo central: 50 mm; Altura do segmento: 10 mm; Espessura: 2,9 mm; materiais: Ultracompactos.
+- Serra Diamantada Concreto e Granilite — nível Pro. Diâmetro: 300 mm; Furo central: 25,4 mm; Altura do segmento: 12 mm; Espessura: 3,2 mm; materiais: Concreto e Granilite.
+- Serra Diamantada — nível Std. Diâmetro: 350 mm; Furo central: 50 mm; Altura do segmento: 15 mm; Espessura: 3,2 mm; materiais: Mármore e Granito.
 
-### Serra Quartzito Silenciosa
-- Categoria: Serras Diamantadas
-- Etapa: Corte
-- Dimensões: 350 × 50 × 20 × 3,2 mm
-- Tipo: Silenciosa
-- Material: Quartzito
-- Descrição: Serra diamantada silenciosa desenvolvida para o corte de quartzito, material duro que exige segmento resistente.
+### Brocas Diamantadas (8)
+- Broca Diamantada para Mármore e Granito. Encaixe: duplo encaixe / M14 (dispensa adaptadores); Diâmetros: 6 a 150 mm; materiais: Mármore e Granito.
+- Broca para Mármore e Granito com Escareador. Encaixe: duplo encaixe / M14; Furo: 32 mm; Rebaixo: 62 mm; materiais: Mármore e Granito.
+- Broca Diamantada para Dekton (ultracompactos). Encaixe: duplo encaixe / M14 (dispensa adaptadores); Diâmetros: 10 a 70 mm; materiais: Ultracompactos.
+- Broca Diamantada para Porcelanato. Encaixe: duplo encaixe / M14 (dispensa adaptadores); Diâmetros: 6 a 70 mm; materiais: Porcelanato.
+- Broca Diamantada para Nanoglass. Encaixe: duplo encaixe / M14 (dispensa adaptadores); Diâmetros: 6 a 40 mm; materiais: Nanoglass.
+- Broca Haste Multipropósito. Diâmetros: 5 / 6 / 8 / 10 / 12 mm; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Broca Cônica Multipropósito para Chanfro. Encaixe: M14; Medida: 38 × 45 mm; materiais: Mármore e Granito.
+- Broca Cônica Multipropósito. Encaixe: M14; Medida: 35 mm; materiais: Mármore e Granito.
 
-### Lixa Diamantada 3 Passos
-- Categoria: Lixas Diamantadas
-- Nível: Premium
-- Etapa: Polimento
-- Diâmetro: Ø100 mm
-- Sistema: 3 passos
-- Passo: #1
-- Descrição: Sistema de polimento em 3 passos: menos trocas de lixa e mais agilidade para chegar ao brilho.
+### Máquinas (6)
+- Serra Mármore SM-MT-023. Modelo: SM-MT-023; Rotação máx.: 12.000 rpm; Potência: 1.550 W; Frequência: 50/60 Hz; Disco: Ø110 mm; Peso: 2,9 kg; materiais: Mármore e Granito.
+- Esmerilhadeira Angular EA-MT-025. Modelo: EA-MT-025; Rotação máx.: 11.000 rpm; Potência: 900 W; Frequência: 50/60 Hz; Disco: Ø125 mm; Peso: 1,8 kg; materiais: Mármore e Granito, Concreto e Granilite.
+- Politriz Elétrica Úmido MT-01. Modelo: MT-01; Rotação máx.: 6.000 rpm; Potência: 1.200 W; Frequência: 50/60 Hz; Diâmetro: 100 a 180 mm; Peso: 3,2 kg; materiais: Mármore e Granito.
+- Politriz Elétrica Úmido MT-023. Modelo: MT-023; Rotação máx.: 8.500 rpm; Potência: 1.400 W; Frequência: 50/60 Hz; Diâmetro: 100 a 180 mm; Peso: 2,9 kg; materiais: Mármore e Granito.
+- Politriz Pneumática PP-MT-023. Modelo: PP-MT-023; Rotação máx.: 10.000 rpm; Consumo de ar: 14 PCM; Pressão: 90 PSI; Peso: 2,6 kg; materiais: Mármore e Granito.
+- Politriz Vertical PV-MT-025. Modelo: PV-MT-025; Rotação máx.: 4.500 rpm; Potência: 710 W; Frequência: 50/60 Hz; Diâmetro: 150 mm; Peso: 2,9 kg; materiais: Mármore e Granito.
 
-### Serra Silenciosa Tree Step
-- Categoria: Serras Diamantadas
-- Nível: Premium
-- Etapa: Corte
-- Dimensões: 350 × 50 × 15 × 3,6 mm
-- Tipo: Silenciosa
-- Nível: Premium
-- Descrição: Serra diamantada silenciosa da linha Premium, com segmento Tree Step para corte de alta performance na serra de bancada.
+### Lixas Diamantadas (22)
+- Lixa Diamantada SLX para Polimento — linha SLX. Diâmetro: 100 mm (4") / 125 mm (5"); Polimento: seco ou úmido; Espessura: 2,5 mm; Grãos: #50 a #3000; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Lixa Diamantada SL para Piso — linha SL. Diâmetro: 80 mm (3"); Polimento: úmido; Espessura: 10 mm; Grãos: #50 a #3000; materiais: Mármore e Granito.
+- Lixa Diamantada SL para Polimento — linha SL. Diâmetro: 100 mm (4") / 125 mm (5"); Polimento: úmido; Espessura: 2,5 mm; Grãos: #50 a #3000; materiais: Mármore e Granito, Concreto e Granilite.
+- Lixa Diamantada SL para Concreto — linha SL. Diâmetro: 80 mm (3"); Polimento: úmido; Espessura: 10 mm; Grãos: #50 a #3000; materiais: Concreto e Granilite.
+- Lixa Diamantada 3 Passos — nível Premium. Diâmetro: 100 mm (4"); Polimento: seco ou úmido; Espessura: 3 mm; Grãos: #1 #2 #3; materiais: Mármore e Granito.
+- Lixa Diamantada CFI — nível Premium. Diâmetro: 100 mm (4"); Polimento: seco ou úmido; Espessura: 6 mm; Grãos: #30 a #3000; materiais: Concreto e Granilite.
+- Lixa Esponja — nível Premium. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 12 mm; Grãos: #150 a #10000; materiais: Mármore e Granito, Quartzito, Porcelanato.
+- Lixa Diamantada Colmeia — nível Premium. Diâmetro: 100 mm (4"); Polimento: seco; Espessura: 2 mm; Grãos: #50 a #3000; materiais: Mármore e Granito, Nanoglass, Porcelanato.
+- Lixa Diamantada para Concreto — nível Premium. Diâmetro: 240 mm; Polimento: úmido; Espessura: 10 mm; Grãos: #50 a #3000; materiais: Mármore e Granito, Concreto e Granilite.
+- Lixa Diamantada 5 Passos — nível Premium. Diâmetro: 100 mm (4"); Polimento: seco ou úmido; Espessura: 3 mm; Grãos: #1 a #5; materiais: Mármore e Granito.
+- Barril de Polimento e Refil — nível Premium. Diâmetro: 25 / 50 mm; Polimento: úmido; Encaixe: M14; Grãos: #50 a #3000; materiais: Mármore e Granito.
+- Lixa Diamantada Super Floor — nível Premium. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 8 mm; Grãos: #30 a #3000; materiais: Mármore e Granito, Concreto e Granilite.
+- Lixa Diamantada para Rebaixo Italiano — nível Premium. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 3 mm; Grãos: #50 a #3000; materiais: Mármore e Granito.
+- Lixa Diamantada Buff — nível Premium. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 2,7 mm; Grãos: buff; materiais: Mármore e Granito.
+- Lixa Diamantada Buff Colmeia — nível Premium. Diâmetro: 100 mm (4"); Polimento: seco; Espessura: 2,0 mm; Grãos: buff; materiais: Mármore e Granito.
+- Lixa Diamantada Turbo — nível Premium. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 3 mm; Grãos: #30 a #3000; materiais: Mármore e Granito, Concreto e Granilite.
+- Lixa Diamantada Convexa — nível Premium. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 2,5 mm; Grãos: #50 a #3000; materiais: Mármore e Granito.
+- Lixa Diamantada SLe para Polimento — nível Pro. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 2,5 mm; Grãos: #50 a #3000; materiais: Mármore e Granito.
+- Lixa Diamantada 3 Passos — nível Pro. Diâmetro: 100 mm (4"); Polimento: seco ou úmido; Espessura: 3 mm; Grãos: #1 #2 #3; materiais: Mármore e Granito.
+- Lixa Diamantada SLXe para Polimento — nível Pro. Diâmetro: 100 mm (4"); Polimento: seco ou úmido; Espessura: 2,5 mm; Grãos: #50 a #3000; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Lixa Diamantada Espiral — nível Std. Diâmetro: 100 mm (4"); Polimento: úmido; Espessura: 2,5 mm; Grãos: #50 a #3000; materiais: Mármore e Granito.
+- Lixa Diamantada — nível Std. Diâmetro: 100 mm (4") / 125 mm (5"); Polimento: úmido; Espessura: 2,5 mm; Grãos: #50 a #3000 · fundo branco ou colorido; materiais: Mármore e Granito.
 
-### Disco Ultracompacto
-- Categoria: Discos de Corte
-- Etapa: Corte
-- Diâmetro: Ø120 mm
-- Material: Ultracompactos
-- Descrição: Disco dedicado aos ultracompactos — superfícies densas que pedem corte preciso e controlado.
+### Polibordas (4)
+- Poliborda Branco (Face). Diâmetro: 125 mm (5") / 150 mm (6"); Polimento: úmido; Espessura: 11 mm; Grãos: #50 a #3000; materiais: Nanoglass, Mármore e Granito.
+- Poliborda Branco (Bisote). Diâmetro: 125 mm (5"); Polimento: úmido; Espessura: 7 mm; Grãos: #200 a #3000; materiais: Nanoglass, Mármore e Granito.
+- Poliborda Red (Face). Diâmetro: 125 mm (5"); Polimento: úmido; Espessura: 13 mm; Grãos: #50 a #3000; materiais: Nanoglass, Mármore e Granito.
+- Poliborda Red (Bisote). Diâmetro: 125 mm (5"); Polimento: úmido; Espessura: 14,5 mm; Grãos: #200 a #3000; materiais: Nanoglass, Mármore e Granito.
 
-### Escova Tynex Diamantada
-- Categoria: Acabamento
-- Etapa: Acabamento
-- Rosca: M14
-- Grão: #24
-- Descrição: Escova diamantada para texturizar e dar acabamento escovado/envelhecido à superfície da rocha.
+### Desbaste (8)
+- Disco Diamantado de Desbaste Flat. Diâmetro: 100 mm (4"); Encaixe: M14; Material: ferro; Grãos: #36 #80 #120; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Disco Diamantado de Desbaste Curvo. Diâmetro: 100 mm (4"); Encaixe: M14; Material: ferro; Grão: #36; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Disco Diamantado de Acabamento. Diâmetro: 100 mm (4"); Espessura: 3 / 7 mm; Encaixe: M14; Material: ferro; Grãos: #36 a #220; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Disco Diamantado de Desbaste. Diâmetro: 100 / 115 / 150 / 180 mm; Encaixe: M14; Material: ferro; Grãos: #36 #60 #120; materiais: Mármore e Granito, Porcelanato, Quartzito, Nanoglass, Ultracompactos, Concreto e Granilite.
+- Prato de Desbaste DDD. Diâmetro: Ø115 mm; Grão: #60.
+- Apicoador Frankfurt. Encaixe: frankfurt; Rebolos: 1; materiais: Mármore e Granito, Concreto e Granilite, Quartzito, Porcelanato.
+- Sistema Apicoador. Diâmetro: 125 mm (5"); Encaixe: M14; Rebolos: 3; materiais: Mármore e Granito, Concreto e Granilite, Quartzito, Porcelanato.
+- Rebolos para Apicoador Frankfurt. Efeitos: jateado, apicoado (45 e 99 dentes), arenoso rústico e arenoso leve; Uso: Apicoador Frankfurt; materiais: Mármore e Granito, Concreto e Granilite, Quartzito, Porcelanato.
 
-### Prato de Desbaste DDD
-- Categoria: Desbaste
-- Etapa: Desbaste
-- Diâmetro: Ø115 mm
-- Grão: #60
-- Descrição: Prato diamantado para desbaste e nivelamento: remove material com rapidez e prepara a peça para o polimento.
+### Acabamento (8)
+- HTC Husqvarna. Medida: 50 × 55 × 75 mm; Grãos: #16 a #400; materiais: Concreto e Granilite.
+- HTC Soft. Medida: 50 × 50 × 70 mm; Grãos: #30 #60 #120; materiais: Mármore e Granito, Concreto e Granilite.
+- HTC LVS. Medida: 73 × 69 × 55 mm; Grãos: #16 a #220; materiais: Concreto e Granilite.
+- Prato Diamantado com Velcro. Diâmetro: 100 mm (4"); Material: ferro com velcro; Grãos: #16 a #220; materiais: Mármore e Granito, Concreto e Granilite.
+- Escova Tynex M14 Diamantada. Diâmetro: 110 mm; Encaixe: M14 / caracol; Rotação: 1.500 a 3.000 rpm; Cerdas: diamante sintético e nylon; Grãos: #24 a #1200; materiais: Mármore e Granito, Concreto e Granilite.
+- Escova Tynex Frankfurt Diamantada. Encaixe: frankfurt; Rotação: 500 rpm; Cerdas: diamante sintético e nylon; Grãos: #24 a #120; materiais: Mármore e Granito, Concreto e Granilite.
+- Escova Tynex M14 Carbeto. Diâmetro: 110 mm (4") / 125 mm (5"); Encaixe: M14 / caracol; Rotação: 1.500 a 3.000 rpm; Cerdas: carbeto de silício; Grãos: #24 a #1200; materiais: Mármore e Granito, Concreto e Granilite.
+- Escova Tynex Frankfurt Carbeto. Encaixe: frankfurt; Rotação: 500 rpm; Cerdas: carbeto de silício; Grãos: #24 a #120; materiais: Mármore e Granito, Concreto e Granilite.
+
+### Bases (4)
+- Base de Corte Meia Esquadria Maxtool Premium — nível Premium. Compatível com: Serra Mármore Maxtool SM-MT-023.
+- Base de Corte Meia Esquadria Maxtool Pro — nível Pro. Compatível com: Serra Mármore Maxtool SM-MT-023.
+- Base de Corte Meia Esquadria. Compatível com: Makita profissional 4100NH2.
+- Suporte de Metal para Esmerilhadeira. Medida: 125 mm; Material: metal e plástico.
+
+### Ferramentas Manuais (22)
+- Sargento 45° (Meia Esquadria). Medidas: 35 cm (abertura 27,5 cm) / 50 cm (abertura 43,5 cm); Material: aço carbono.
+- Sargento de Pressão. Medida: 6"; Material: aço.
+- Grampo Rápido. Medidas: 4" / 6" / 8" / 10"; Material: ferro e plástico.
+- Grampo Tipo F. Medida: 8"; Material: aço e alumínio.
+- Sargento Grampo C. Medidas: 3" / 4" / 6"; Material: ferro fundido.
+- Grampo Tipo A. Medidas: 4" / 6" / 7" / 9"; Material: alumínio.
+- Esquadro para Nicho. Medidas: 152 × 210 cm / 210 × 213 cm; Material: alumínio.
+- Trena Maxtool. Medidas: 5 m / 7,5 m; Material: PVC emborrachado.
+- Trena 5 m. Medida: 5 m; Material: plástico ABS.
+- Guia para Furo. Aperto: 4 a 83 mm; Material: plástico.
+- Metro Articulado. Medida: 2 m, 12 dobras; Marcação: em baixo relevo; Material: nylon.
+- Metro Sueco Hultafors. Versões: alumínio (2 m, 10 dobras); fibra de vidro (2 m, 12 dobras · 1 m, 6 dobras · 2 m, 10 dobras com escala invertida); madeira.
+- Esquadro Angular. Medida: 50 cm.
+- Esquadro Tipo L. Medidas: 4" / 6" / 8"; Material: ABS e fibra.
+- Mão Amiga. Uso: carregamento de mármores e granitos; Material: ferro e borracha; materiais: Mármore e Granito.
+- Ventosa Dupla para 45°. Peso: 2,2 kg; Nivelamento: ajustável, não marca o material; Material: alumínio.
+- Ventosa Dupla para Nivelamento. Peso: 1,1 kg; Capacidade: até 100 kg; Material: alumínio.
+- Aplicador de Silicone. Capacidade: 600 g; Material: metal e plástico.
+- Aplicador de Selante. Capacidade: 400 g; Material: metal.
+- Nivelador de Porcelanato. Material: metal; materiais: Porcelanato.
+- Rolo de Fibra para Reforço. Medidas: 6,5 × 3 mm / 9,35 × 3 mm; Material: fibra de vidro.
+- Avental. Medida: 120 cm (A) × 75 cm (L).
+
+### Acessórios (18)
+- Suporte de Plástico com Velcro. Diâmetro: 100 mm (4") / 180 mm (7"); Encaixe: M14; Tipo: rígido / flexível.
+- Suporte de Plástico sem Velcro. Diâmetro: 180 mm (7"); Encaixe: porca cônica; Tipo: rígido / flexível.
+- Suporte de Borracha com Velcro. Diâmetro: 100 mm (4") / 125 mm (5"); Encaixe: M14; Tipo: rígido / semi-rígido / flexível / super flexível.
+- Suporte de Borracha Côncavo com Velcro. Diâmetro: 100 mm (4"); Encaixe: M14; Tipo: semi-rígido.
+- Suporte de Borracha Flat com Velcro. Diâmetro: 100 mm (4"); Encaixe: M14; Tipo: semi-rígido / super flexível.
+- Suporte de Plástico com Espuma e Velcro. Diâmetro: 100 mm (4") / 125 mm (5") / 180 mm (7"); Encaixe: M14; Tipo: rígido.
+- Suporte de Plástico Caracol com Velcro. Diâmetro: 125 mm (5"); Encaixe: caracol; Tipo: rígido.
+- Suporte Caracol de Alumínio. Diâmetro: 100 mm (4") / 125 mm (5"); Encaixe: M14 / caracol; Material: alumínio e borracha.
+- Feltro com Velcro. Diâmetro: 100 mm / 180 mm; Espessura: 15 mm.
+- Roda de Feltro. Diâmetro: 100 mm (4"); Encaixe: caracol; Espessura: 20 mm.
+- Refil de Velcro para Suporte de Lixas. Diâmetro: 100 mm (4") / 125 mm (5") / 180 mm (7").
+- Suporte de Plástico Frankfurt. Encaixe: frankfurt; Tipo: rígido.
+- Adaptador Husqvarna. Medida: 73 × 69 × 55 mm; Encaixe: LVS – Husqvarna; Material: metal.
+- Gaveta LVS. Encaixe: LVS; Material: metal.
+- Anel Redutor. Medida: 50 mm – 25,4 mm; Espessura: 1,4 / 1,6 / 1,8 / 2,0 mm; Material: cobre.
+- Porca de Aperto. Encaixe: M14; Material: alumínio.
+- Pulverizador para Serra Mármore. Mangueira: flexível; Compatibilidade: universal; Material: latão e metal.
+- Dimmer 3000 W. Potência: 3.000 W; Tensão: bivolt (110 V / 220 V).
 
 ## Garantia
 Toda máquina Maxtool tem garantia contra defeitos de fabricação (não cobre mau uso, desgaste natural, aplicação incorreta ou uso fora das recomendações do produto). Com a nota fiscal em mãos, fale primeiro com a Maxtool pelo WhatsApp +55 27 99201-9026.
@@ -444,11 +530,11 @@ Toda máquina Maxtool tem garantia contra defeitos de fabricação (não cobre m
 ### O que é o Max Tool Day?
 É o evento presencial de capacitação para marmoristas que a Maxtool faz dentro das revendas parceiras: demonstração ao vivo de corte, desbaste e polimento, técnica na prática e contato direto com o time Maxtool. A próxima edição é em 13 de novembro de 2026, na BSB Abrasivos, em Vicente Pires-DF.
 ### Qual disco Maxtool usar para cortar porcelanato?
-Para porcelanato, a Maxtool indica o Disco de Corte Mesh Ø115 mm, da linha Premium, com borda mesh para corte fino e sem lascar.
+Para porcelanato, a Maxtool tem o Disco de Corte Mesh Premium (75, 110 e 115 mm), com borda que corta sem lascar, o Disco Turbo Extra Fino Pro e o Disco Multipropósito Std. Na serra de bancada, as serras diamantadas Porcelanato e Mesh (250 a 350 mm); para furos, a broca diamantada para porcelanato (6 a 70 mm).
 ### Qual disco usar para ultracompactos?
-Para ultracompactos, a Maxtool tem o Disco Ultracompacto Ø120 mm, dedicado a superfícies densas que pedem corte preciso.
+Para ultracompactos, a Maxtool tem o Disco de Corte Ultracompactos Premium (120 mm), as serras diamantadas Ultracompactos Premium (250 a 350 mm) e Pro (350 mm) e a broca diamantada para Dekton (10 a 70 mm).
 ### Qual serra usar para quartzito?
-Para quartzito, a Maxtool tem a Serra Quartzito Silenciosa 350 × 50 × 20 × 3,2 mm, desenvolvida para esse material duro. Para outras medidas, a equipe técnica indica a opção certa.
+Para quartzito, a Maxtool tem a Serra Diamantada Quartzito Premium (250, 300 e 350 mm, segmento de 20 mm). O catálogo também indica para quartzito a Serra Ultracompactos e a Serra Turbo Protegida Premium.
 ### Qual lixa usar para polir granito ou porcelanato?
 Depende do material, da etapa do polimento e do acabamento desejado. A Maxtool tem lixas diamantadas, lixas de 3 passos e lixas resinadas em diferentes granulometrias, e a equipe orienta a sequência certa para cada aplicação.
 ### O disco ou a lixa serve em qualquer máquina?

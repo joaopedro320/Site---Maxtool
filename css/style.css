@@ -972,3 +972,70 @@ main > .onde:first-child { min-height: 92vh; display: flex; align-items: center;
 .priv-texto ul { padding-left: 20px; display: grid; gap: 8px; margin: 12px 0; }
 .priv-texto a { color: var(--red); }
 @media (max-width: 900px) { .priv-inner { grid-template-columns: 1fr; } .priv-resumo { position: static; } }
+
+/* =========================================================
+   Catálogo 2026 — imagens e filtros
+   ========================================================= */
+.prod-media picture, .guia-prod picture, .etapa-prod picture { display: contents; }
+.tag.is-linha { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.4); }
+
+/* grade de produtos */
+.grid-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 14px; }
+.filtros-sel { display: flex; flex-wrap: wrap; gap: 10px; }
+.filtros-sel label { display: flex; flex-direction: column; gap: 6px; font-family: var(--f-cond); font-weight: 700; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--steel-mid); }
+.filtros-sel select {
+  height: 46px; min-width: 190px; padding: 0 40px 0 14px; border-radius: 6px; border: 1.5px solid var(--line-dark);
+  background: var(--ink-3) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e4213a' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;
+  color: #fff; font: inherit; font-family: var(--f-body); font-size: 16px; text-transform: none; letter-spacing: 0; appearance: none; -webkit-appearance: none; cursor: pointer;
+}
+.filtros-sel select:focus { outline: none; border-color: var(--red); }
+.grid-tools .busca-prod { margin-left: auto; }
+.grid-count { color: var(--steel); margin: 0 0 22px; display: flex; align-items: center; gap: 14px; }
+.grid-count b { font-family: var(--f-display); font-weight: 400; font-size: 28px; color: #fff; }
+.grid-limpar { background: none; border: 1.5px solid var(--line-dark); color: #fff; border-radius: 30px; padding: 6px 14px; font-family: var(--f-cond); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 13px; }
+.grid-limpar:hover { border-color: var(--red); color: var(--red); }
+.prod-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.prod-grid .prod { min-height: 360px; padding: 20px; }
+.prod-grid .prod-media { min-height: 170px; margin: 8px 0 14px; }
+.prod-grid .prod-media img { max-height: 170px; }
+.prod-grid .prod-name { font-size: 26px; }
+.prod-grid .prod-spec { font-size: 15px; }
+@media (max-width: 700px) {
+  .filtros-sel { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+  .filtros-sel select { min-width: 0; width: 100%; }
+  .grid-tools .busca-prod { margin-left: 0; width: 100%; }
+  .prod-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .prod-grid .prod { min-height: 300px; padding: 14px; }
+  .prod-grid .prod-media { min-height: 120px; }
+  .prod-grid .prod-media img { max-height: 120px; }
+  .prod-grid .prod-name { font-size: 21px; }
+}
+
+/* guia por material */
+.guia-row h4 small { display: block; margin-top: 4px; font-family: var(--f-body); font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--steel-mid); font-size: 14px; }
+.guia-prod img { width: 64px; height: 64px; object-fit: contain; flex: none; }
+.guia-mais { display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 92px; padding: 8px 14px; border-radius: 6px; border: 1.5px dashed rgba(228,33,58,.6); color: #fff; text-decoration: none; font-family: var(--f-display); font-size: 30px; line-height: 1; transition: background .3s, border-color .3s; }
+.guia-mais small { font-family: var(--f-cond); font-weight: 700; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--steel); margin-top: 4px; }
+.guia-mais:hover { background: var(--red); border-color: var(--red); }
+.guia-mais:hover small { color: #fff; }
+.guia-panel-head { flex-wrap: wrap; }
+.guia-panel-head > div { flex: 1; min-width: 220px; }
+.guia-total { display: flex; align-items: center; gap: 12px; text-decoration: none; padding: 12px 16px; border-radius: 6px; background: #000; border: 1px solid var(--line-dark); transition: border-color .3s; }
+.guia-total:hover { border-color: var(--red); }
+.guia-total b { font-family: var(--f-display); font-weight: 400; font-size: 46px; line-height: .9; color: var(--red); }
+.guia-total span { font-family: var(--f-cond); font-weight: 600; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; color: var(--steel); line-height: 1.2; }
+
+/* etapas */
+.etapa-prod img { height: 110px; }
+.etapa-mais { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-family: var(--f-cond); font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; font-size: 15px; color: var(--red); text-decoration: none; }
+.etapa-mais svg { width: 16px; height: 16px; transition: transform .3s var(--ease); }
+.etapa-mais:hover svg { transform: translateX(5px); }
+
+/* níveis com o disco do catálogo */
+.tier { padding-top: 30px; }
+.tier-disc { display: block; position: absolute; right: -60px; top: -50px; width: 220px; opacity: .9; pointer-events: none; }
+.tier-disc img { width: 100%; height: auto; animation: spin 26s linear infinite; filter: drop-shadow(0 20px 30px rgba(0,0,0,.6)); }
+.tier:hover .tier-disc img { animation-duration: 6s; }
+.tier h3, .tier p, .tier ul, .tier .tag, .tier-meter { position: relative; z-index: 1; }
+.tier p { max-width: 30ch; }
+@media (max-width: 900px) { .tier-disc { width: 170px; right: -40px; top: -40px; } }

@@ -19,8 +19,9 @@ import re
 from datetime import date
 from pathlib import Path
 
+from catalogo import MAT, ORDEM_CATEGORIAS, completar
 from data import (CATEGORIAS, DIFERENCIAIS, EMPRESA as E, ERROS_COMUNS, ETAPAS, FAQS, GTM_ID, GUIA_MATERIAIS,
-                  LINHA_COMPLETA, MATERIAIS, MTDAY, NIVEIS, PRODUTOS, REELS, REMOTE, SITE)
+                  LINHA_COMPLETA, MATERIAIS, MTDAY, NIVEIS, REELS, REMOTE, SITE)
 
 SRC = Path(__file__).parent
 ROOT = SRC.parent
@@ -102,8 +103,37 @@ def faq_section(slug):
 '''
 
 
+PRODUTOS = completar(json.loads((SRC / 'catalogo_dims.json').read_text()))
 PROD = {p['id']: p for p in PRODUTOS}
+DESTAQUES = [p for p in PRODUTOS if p['destaque']]
 slug = lambda t: re.sub(r'[^a-z0-9]+', '-', t.lower().translate(str.maketrans('áàâãéêíóôõúç', 'aaaaeeiooouc'))).strip('-')
+NIVEL_ORDEM = {'Premium': 0, 'Pro': 1, None: 2, 'Std': 3}
+ordenar = lambda lst: sorted(lst, key=lambda p: (not p['destaque'], NIVEL_ORDEM.get(p['nivel'], 2)))
+
+
+def pic(p, alt='', eager=False):
+    """<picture> com AVIF e PNG de reserva (ou a imagem única dos produtos antigos)."""
+    load = '' if eager else ' loading="lazy"'
+    img = f'<img src="{p["fallback"]}" alt="{esc(alt)}" width="{p["w"]}" height="{p["h"]}"{load} decoding="async">'
+    if p['img'].endswith('.avif'):
+        return f'<picture><source srcset="{p["img"]}" type="image/avif">{img}</picture>'
+    return img
+
+
+def tag_nivel(p):
+    return f'<span class="tag is-{p["nivel"].lower()}">{p["nivel"]}</span>' if p.get('nivel') else (
+        f'<span class="tag is-linha">{p["linha"]}</span>' if p.get('linha') else '')
+
+
+GUIA_COD = {'marmore-granito': 'mg', 'porcelanato': 'por', 'quartzito': 'qtz', 'nanoglass': 'nano',
+            'ultracompactos': 'ult', 'concreto-granilite': 'conc'}
+GUIA_LINHAS = [
+    ('Corte', lambda p: p['etapa'] == 0 and p['cat'] != 'Brocas Diamantadas', 0),
+    ('Furo', lambda p: p['cat'] == 'Brocas Diamantadas', 0),
+    ('Desbaste', lambda p: p['etapa'] == 1, 1),
+    ('Polimento', lambda p: p['etapa'] == 2, 2),
+    ('Acabamento', lambda p: p['etapa'] == 3, 3),
+]
 
 
 def guia_section():
@@ -116,22 +146,19 @@ def guia_section():
         hidden = '' if i == 0 else ' hidden'
         tabs.append(f'<button role="tab" id="tab-mat-{mid}" aria-controls="mat-{mid}" aria-selected="{sel}"{tabidx}>'
                     f'<svg aria-hidden="true"><use href="#{picto}"/></svg>{nome}</button>')
+        code = GUIA_COD[mid]
         linhas = []
-        for etapa, itens in m['etapas']:
+        for etapa, filtro, eid in GUIA_LINHAS:
+            itens = ordenar([pr for pr in PRODUTOS if code in pr['mats'] and filtro(pr)])
+            if not itens:
+                continue
             chips = []
-            for it in itens:
-                if it in PROD:
-                    pr = PROD[it]
-                    nv = pr.get('nivel')
-                    nivel = f'<span class="tag is-{nv.lower()}">{nv}</span>' if nv else ''
-                    pid, img, w, h = pr['id'], pr['img'], pr['w'], pr['h']
-                    pnome, pspec = esc(pr['nome']), esc(pr['spec'])
-                    chips.append(f'<button class="guia-prod" type="button" data-id="{pid}">'
-                                 f'<img src="/assets/produtos/{img}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async">'
-                                 f'<span><b>{pnome}</b><small>{pspec}</small></span>{nivel}</button>')
-                else:
-                    chips.append(f'<span class="guia-cat">{esc(it)}</span>')
-            linhas.append(f'<div class="guia-row"><h4>{etapa}</h4><div class="guia-itens">{"".join(chips)}</div></div>')
+            for pr in itens[:6]:
+                chips.append(f'<button class="guia-prod" type="button" data-id="{pr["id"]}">{pic(pr)}'
+                             f'<span><b>{esc(pr["nome"])}</b><small>{esc(pr["spec"])}</small></span>{tag_nivel(pr)}</button>')
+            if len(itens) > 6:
+                chips.append(f'<a class="guia-mais" href="/produtos/?material={code}&amp;etapa={eid}#destaques">+{len(itens) - 6}<small>ver todos</small></a>')
+            linhas.append(f'<div class="guia-row"><h4>{etapa}<small>{len(itens)} {"produto" if len(itens) == 1 else "produtos"}</small></h4><div class="guia-itens">{"".join(chips)}</div></div>')
         pergunta = f'Olá! Qual ferramenta Maxtool usar para {nome}?'
         wa = 'https://wa.me/' + E['whatsapp_digits'] + '?text=' + quote(pergunta)
         desafio = esc(m['desafio'])
@@ -141,6 +168,7 @@ def guia_section():
           <div class="guia-panel-head">
             <svg class="guia-picto" aria-hidden="true"><use href="#{picto}"/></svg>
             <div><h3>{nome}</h3><p>{desafio}</p></div>
+            <a class="guia-total" href="/produtos/?material={code}#destaques"><b>{sum(1 for pr in PRODUTOS if code in pr['mats'])}</b><span>produtos do catálogo<br>para {nome.lower()}</span></a>
           </div>
           {corpo}
           <div class="guia-acts">
@@ -215,11 +243,11 @@ def downloads_section():
 
 
 def prod_card(p, i):
-    nivel = f'<span class="tag is-{p["nivel"].lower()}">{p["nivel"]}</span>' if p.get('nivel') else ''
+    mats = ' '.join(p['mats'])
     return f'''
-    <button class="prod{' is-disc' if p.get('disc') else ''}" type="button" data-id="{p['id']}" data-etapa="{p['etapa']}" data-nivel="{p.get('nivel', '')}" data-material="{slug(p.get('material', ''))}" aria-label="Ver detalhes: {esc(p['nome'])}">
-      <span class="prod-top"><span class="prod-idx">{i + 1:02d}</span>{nivel}</span>
-      <span class="prod-media"><img src="/assets/produtos/{p['img']}" alt="{esc(p['nome'])} — {esc(p['spec'])}" width="{p['w']}" height="{p['h']}" loading="lazy" decoding="async"></span>
+    <button class="prod{' is-disc' if p.get('disc') else ''}" type="button" data-id="{p['id']}" data-etapa="{p['etapa'] if p['etapa'] is not None else ''}" data-nivel="{p.get('nivel') or ''}" data-cat="{slug(p['cat'])}" data-mats="{mats}" aria-label="Ver detalhes: {esc(p['nome'])}">
+      <span class="prod-top"><span class="prod-idx">{i + 1:02d}</span>{tag_nivel(p)}</span>
+      <span class="prod-media">{pic(p, p['nome'] + ' — ' + p['spec'])}</span>
       <span class="prod-info">
         <span class="prod-cat">{esc(p['cat'])}</span>
         <span class="prod-name">{esc(p['nome'])}</span>
@@ -231,21 +259,41 @@ def prod_card(p, i):
 
 def showcase_cards():
     end = f'''
-    <a class="prod-end" href="{REMOTE}/catalogo/maxtool-catalogo-2026-leve.pdf" target="_blank" rel="noopener" data-track="catalogo_vitrine">
-      <b>+1.000<br>itens no<br>catálogo<br>2026</b>
-      <span>Ver o catálogo completo <svg><use href="#i-arrow"/></svg></span>
+    <a class="prod-end" href="/produtos/#destaques" data-track="catalogo_vitrine">
+      <b>+{len(PRODUTOS)}<br>produtos<br>no site</b>
+      <span>Ver a linha completa <svg><use href="#i-arrow"/></svg></span>
     </a>'''
-    return ''.join(prod_card(p, i) for i, p in enumerate(PRODUTOS)) + end
+    return ''.join(prod_card(p, i) for i, p in enumerate(DESTAQUES)) + end
+
+
+def prod_grid():
+    ordem = {c: i for i, c in enumerate(ORDEM_CATEGORIAS)}
+    lista = sorted(PRODUTOS, key=lambda p: (ordem.get(p['cat'], 99), NIVEL_ORDEM.get(p['nivel'], 2)))
+    return ''.join(prod_card(p, i) for i, p in enumerate(lista))
+
+
+def grid_filtros():
+    cats = ''.join(f'<option value="{slug(c)}">{esc(c)} ({sum(1 for p in PRODUTOS if p["cat"] == c)})</option>' for c in ORDEM_CATEGORIAS)
+    mats = ''.join(f'<option value="{k}">{v} ({sum(1 for p in PRODUTOS if k in p["mats"])})</option>' for k, v in MAT.items())
+    return f'''<div class="filtros-sel">
+        <label><span>Categoria</span><select id="f-cat"><option value="">Todas</option>{cats}</select></label>
+        <label><span>Material</span><select id="f-mat"><option value="">Todos</option>{mats}</select></label>
+        <label><span>Etapa</span><select id="f-etapa"><option value="">Todas</option><option value="0">Corte e furo</option><option value="1">Desbaste</option><option value="2">Polimento</option><option value="3">Acabamento</option></select></label>
+        <label><span>Nível</span><select id="f-nivel"><option value="">Todos</option><option>Premium</option><option>Pro</option><option>Std</option></select></label>
+      </div>'''
 
 
 def etapas_panels():
     out = []
     for i, e in enumerate(ETAPAS):
+        todos = ordenar([p for p in PRODUTOS if p['etapa'] == i])
         prods = ''.join(f'''
           <button class="etapa-prod" type="button" data-id="{p['id']}">
-            <img src="/assets/produtos/{p['img']}" alt="" width="{p['w']}" height="{p['h']}" loading="lazy" decoding="async">
+            {pic(p)}
             <b>{esc(p['nome'])}</b><small>{esc(p['spec'])}</small>
-          </button>''' for p in PRODUTOS if p['etapa'] == i)
+          </button>''' for p in todos[:8])
+        mais = (f'<a class="etapa-mais" href="/produtos/?etapa={i}#destaques">Ver todos os {len(todos)} produtos de {e["nome"].lower()} '
+                f'<svg><use href="#i-arrow"/></svg></a>') if len(todos) > 8 else ''
         cats = ''.join(f'<span>{esc(c)}</span>' for c in e['cats'])
         out.append(f'''
       <div class="etapa" id="etapa-{i}" role="tabpanel" aria-labelledby="tab-etapa-{i}"{'' if i == 0 else ' hidden'}>
@@ -255,6 +303,7 @@ def etapas_panels():
         </div>
         <div class="etapa-cats">{cats}</div>
         <div class="etapa-prods">{prods}</div>
+        {mais}
       </div>''')
     return ''.join(out)
 
@@ -382,13 +431,15 @@ def org_nodes():
 
 
 def product_node(p):
-    node = {'@type': 'Product', '@id': f'{SITE}/produtos/#{p["id"]}', 'name': p['nome'],
-            'image': f'{SITE}/assets/produtos/{p["img"]}', 'description': p['desc'],
+    node = {'@type': 'Product', '@id': f'{SITE}/produtos/#{p["id"]}', 'name': f'{p["nome"]} Maxtool' + (f' {p["nivel"]}' if p['nivel'] else ''),
+            'image': SITE + p['fallback'], 'description': p['desc'],
             'brand': {'@type': 'Brand', 'name': 'Maxtool'}, 'manufacturer': {'@id': ORG_ID},
             'category': p['cat'],
-            'additionalProperty': [{'@type': 'PropertyValue', 'name': k, 'value': v} for k, v in p['specs']]}
-    if p.get('modelo'):
-        node['model'] = p['modelo']
+            'additionalProperty': [{'@type': 'PropertyValue', 'name': k, 'value': v} for k, v in p['specs']]
+            + [{'@type': 'PropertyValue', 'name': 'Material indicado', 'value': m} for m in p['materiais']]}
+    modelo = dict(p['specs']).get('Modelo')
+    if modelo:
+        node['model'] = modelo
     return node
 
 
@@ -416,10 +467,12 @@ def page_graph(p, faq_items):
                       'mainEntity': [{'@type': 'Question', 'name': q,
                                       'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faq_items]})
     if p['slug'] in ('home', 'produtos'):
-        nodes.append({'@type': 'ItemList', '@id': url + '#produtos', 'name': 'Destaques da linha Maxtool',
-                      'numberOfItems': len(PRODUTOS), 'itemListElement': [
+        lista = PRODUTOS if p['slug'] == 'produtos' else DESTAQUES
+        nodes.append({'@type': 'ItemList', '@id': url + '#produtos',
+                      'name': 'Produtos Maxtool' if p['slug'] == 'produtos' else 'Destaques da linha Maxtool',
+                      'numberOfItems': len(lista), 'itemListElement': [
                           {'@type': 'ListItem', 'position': i + 1, 'item': product_node(x)}
-                          for i, x in enumerate(PRODUTOS)]})
+                          for i, x in enumerate(lista)]})
     if p['slug'] == 'pecas':
         maquinas = json.loads((ROOT / 'assets/pecas/pecas.json').read_text())
         nodes.append({'@type': 'ItemList', 'name': 'Máquinas Maxtool com vista explodida e peças de reposição',
@@ -518,17 +571,21 @@ def gtm():
 
 
 def site_data():
-    data = {'produtos': [{k: p.get(k) for k in ('id', 'img', 'nome', 'cat', 'nivel', 'disc', 'spec', 'desc', 'specs')} for p in PRODUTOS]}
-    return f'<script type="application/json" id="site-data">{json.dumps(data, ensure_ascii=False)}</script>'
+    return '<script>window.MAXTOOL_DATA = "/assets/catalogo/produtos.json";</script>'
 
 
-COMPONENTES = {'guia': guia_section, 'diferenciais': diferenciais_section, 'downloads': downloads_section}
+def produtos_json():
+    campos = ('id', 'img', 'fallback', 'nome', 'cat', 'nivel', 'linha', 'disc', 'spec', 'desc', 'specs', 'materiais', 'pagina')
+    return json.dumps({'produtos': [{k: p.get(k) for k in campos} for p in PRODUTOS]}, ensure_ascii=False, separators=(',', ':'))
 
 
 def versao(arquivo):
     """Hash curto do arquivo para quebrar cache do navegador a cada build."""
     import hashlib
     return hashlib.md5((ROOT / arquivo).read_bytes()).hexdigest()[:8]
+
+
+COMPONENTES = {'guia': guia_section, 'diferenciais': diferenciais_section, 'downloads': downloads_section}
 
 
 def render(p, layout):
@@ -546,11 +603,12 @@ def render(p, layout):
     content = '\n'.join(parts)
     for k, fn in {'{{linha_completa}}': lambda: ''.join(f'<span>{esc(c)}</span>' for c in LINHA_COMPLETA),
                   '{{showcase_cards}}': showcase_cards, '{{etapas_panels}}': etapas_panels,
-                  '{{reels}}': reels, '{{prod_grid}}': lambda: ''.join(prod_card(x, i) for i, x in enumerate(PRODUTOS))}.items():
+                  '{{reels}}': reels, '{{prod_grid}}': prod_grid, '{{grid_filtros}}': grid_filtros,
+                  '{{total_produtos}}': lambda: str(len(PRODUTOS))}.items():
         if k in content:
             content = content.replace(k, fn())
     content = content.replace('{{updated}}', HOJE.isoformat()).replace('{{updated_br}}', HOJE.strftime('%d/%m/%Y'))
-    content = content.replace('{{showcase_total}}', f'{len(PRODUTOS) + 1:02d}')
+    content = content.replace('{{showcase_total}}', f'{len(DESTAQUES) + 1:02d}')
     if p['slug'] == 'home':
         content = re.sub(r'\s*<a [^>]*data-page-only[^>]*>.*?</a>', '', content, flags=re.S)
     else:
@@ -584,7 +642,7 @@ def render(p, layout):
 def sitemap():
     prio = {'/': '1.0', '/produtos/': '0.9', '/seja-um-revendedor/': '0.9', '/onde-comprar/': '0.8',
             '/pecas/': '0.8', '/max-tool-day/': '0.7', '/sobre/': '0.7', '/contato/': '0.6', '/politica-de-privacidade/': '0.2'}
-    imgs = {'/': ['produtos/serra-marmore-hero.webp'], '/produtos/': [f'produtos/{p["img"]}' for p in PRODUTOS],
+    imgs = {'/': ['produtos/serra-marmore-hero.webp'], '/produtos/': [p['fallback'].replace('/assets/', '', 1) for p in PRODUTOS],
             '/max-tool-day/': ['instagram/maxtool-day.jpg'], '/seja-um-revendedor/': ['produtos/catalogo-capa.jpg']}
     urls = []
     for p in PAGES:
@@ -658,10 +716,17 @@ Fatos principais:
 
 
 def llms_full():
-    prods = '\n'.join(
-        f'### {p["nome"]}\n- Categoria: {p["cat"]}' + (f'\n- Nível: {p["nivel"]}' if p.get('nivel') else '')
-        + f'\n- Etapa: {ETAPAS[p["etapa"]]["nome"]}\n' + '\n'.join(f'- {k}: {v}' for k, v in p['specs'])
-        + f'\n- Descrição: {p["desc"]}\n' for p in PRODUTOS)
+    blocos = []
+    for c in ORDEM_CATEGORIAS:
+        itens = [p for p in PRODUTOS if p['cat'] == c]
+        linhas = []
+        for p in itens:
+            nv = f" — nível {p['nivel']}" if p['nivel'] else (f" — linha {p['linha']}" if p['linha'] else '')
+            mats = f"; materiais: {', '.join(p['materiais'])}" if p['materiais'] else ''
+            esp = '; '.join(f'{k}: {v}' for k, v in p['specs'])
+            linhas.append(f"- {p['nome']}{nv}. {esp}{mats}.")
+        blocos.append(f'### {c} ({len(itens)})\n' + '\n'.join(linhas) + '\n')
+    prods = '\n'.join(blocos)
     etapas = '\n'.join(f'- {e["nome"]}: {e["txt"]} Categorias: {", ".join(e["cats"])}.' for e in ETAPAS)
     maquinas = json.loads((ROOT / 'assets/pecas/pecas.json').read_text())
     pecas = '\n'.join(
@@ -690,7 +755,7 @@ def llms_full():
 ## Etapas do trabalho em rocha
 {etapas}
 
-## Destaques da linha
+## Produtos do catálogo ({len(PRODUTOS)} itens no site; +1.000 no catálogo completo)
 {prods}
 ## Garantia
 Toda máquina Maxtool tem garantia contra defeitos de fabricação (não cobre mau uso, desgaste natural, aplicação incorreta ou uso fora das recomendações do produto). Com a nota fiscal em mãos, fale primeiro com a Maxtool pelo WhatsApp {E['whatsapp']}.
@@ -735,7 +800,8 @@ def build():
         out.write_text(render(p, layout))
         print('ok', out.relative_to(ROOT))
     for name, txt in {'404.html': page_404(layout), 'sitemap.xml': sitemap(), 'robots.txt': robots(),
-                      'llms.txt': llms_txt(), 'llms-full.txt': llms_full(), 'site.webmanifest': manifest()}.items():
+                      'llms.txt': llms_txt(), 'llms-full.txt': llms_full(), 'site.webmanifest': manifest(),
+                      'assets/catalogo/produtos.json': produtos_json()}.items():
         (ROOT / name).write_text(txt)
         print('ok', name)
 

@@ -62,40 +62,7 @@ NIVEIS = [
     ('Std', 'Versatilidade e custo-benefício para o dia a dia.'),
 ]
 
-PRODUTOS = [
-    dict(id='serra-marmore', img='serra-marmore.webp', w=950, h=622, nome='Serra Mármore Maxtool', cat='Máquinas', etapa=0,
-         modelo='SM-MT-023', spec='1.550 W · 12.000 rpm · Ø110 mm',
-         desc='A máquina de corte da bancada. Potência e rotação para cortar rocha e revestimento todo dia — com vista explodida e peças de reposição disponíveis no site.',
-         specs=[['Modelo', 'SM-MT-023'], ['Potência', '1.550 W'], ['Rotação', '12.000 rpm'], ['Disco', 'Ø110 mm']]),
-    dict(id='disco-mesh', img='disco-mesh.webp', w=905, h=950, nome='Disco de Corte Mesh', cat='Discos de Corte', nivel='Premium', etapa=0, disc=True,
-         material='Porcelanato', spec='Ø115 mm · porcelanato',
-         desc='Borda mesh para corte fino e limpo em porcelanato, sem lascar a peça. Linha Premium para quem não aceita retrabalho.',
-         specs=[['Diâmetro', 'Ø115 mm'], ['Furo', '20 mm'], ['Segmento', '10 × 1,4 mm'], ['Material', 'Porcelanato']]),
-    dict(id='serra-quartzito', img='serra-quartzito.webp', w=929, h=950, nome='Serra Quartzito Silenciosa', cat='Serras Diamantadas', etapa=0, disc=True,
-         material='Quartzito', spec='350 × 50 × 20 × 3,2 mm',
-         desc='Serra diamantada silenciosa desenvolvida para o corte de quartzito, material duro que exige segmento resistente.',
-         specs=[['Dimensões', '350 × 50 × 20 × 3,2 mm'], ['Tipo', 'Silenciosa'], ['Material', 'Quartzito']]),
-    dict(id='lixa-3-passos', img='lixa-3-passos.webp', w=895, h=950, nome='Lixa Diamantada 3 Passos', cat='Lixas Diamantadas', nivel='Premium', etapa=2, disc=True,
-         spec='Ø100 mm · passo #1',
-         desc='Sistema de polimento em 3 passos: menos trocas de lixa e mais agilidade para chegar ao brilho.',
-         specs=[['Diâmetro', 'Ø100 mm'], ['Sistema', '3 passos'], ['Passo', '#1']]),
-    dict(id='serra-tree-step', img='serra-tree-step.webp', w=929, h=950, nome='Serra Silenciosa Tree Step', cat='Serras Diamantadas', nivel='Premium', etapa=0, disc=True,
-         spec='350 × 50 × 15 × 3,6 mm',
-         desc='Serra diamantada silenciosa da linha Premium, com segmento Tree Step para corte de alta performance na serra de bancada.',
-         specs=[['Dimensões', '350 × 50 × 15 × 3,6 mm'], ['Tipo', 'Silenciosa'], ['Nível', 'Premium']]),
-    dict(id='disco-ultracompacto', img='disco-ultracompacto.webp', w=905, h=950, nome='Disco Ultracompacto', cat='Discos de Corte', etapa=0, disc=True,
-         material='Ultracompactos', spec='Ø120 mm · ultracompactos',
-         desc='Disco dedicado aos ultracompactos — superfícies densas que pedem corte preciso e controlado.',
-         specs=[['Diâmetro', 'Ø120 mm'], ['Material', 'Ultracompactos']]),
-    dict(id='escova-tynex', img='escova-tynex.webp', w=950, h=749, nome='Escova Tynex Diamantada', cat='Acabamento', etapa=3,
-         spec='M14 · grão #24',
-         desc='Escova diamantada para texturizar e dar acabamento escovado/envelhecido à superfície da rocha.',
-         specs=[['Rosca', 'M14'], ['Grão', '#24']]),
-    dict(id='prato-desbaste', img='prato-desbaste.webp', w=950, h=544, nome='Prato de Desbaste DDD', cat='Desbaste', etapa=1,
-         spec='Ø115 mm · grão #60',
-         desc='Prato diamantado para desbaste e nivelamento: remove material com rapidez e prepara a peça para o polimento.',
-         specs=[['Diâmetro', 'Ø115 mm'], ['Grão', '#60']]),
-]
+# Produtos: ver src/catalogo.py (catálogo 2026 completo, com imagens e materiais).
 
 ETAPAS = [
     dict(nome='Corte', txt='Corte reto e limpo, sem lascar — do granito ao porcelanato, do quartzito ao ultracompacto.',
@@ -141,11 +108,11 @@ F_ONDE = ('Onde fica a Maxtool?',
 F_CATALOGO = ('Onde vejo o catálogo completo da Maxtool?',
               'O catálogo 2026, com mais de 1.000 itens organizados por categoria e nível, pode ser baixado em PDF nas páginas Produtos e Seja um revendedor.')
 F_PORCELANATO = ('Qual disco Maxtool usar para cortar porcelanato?',
-                 'Para porcelanato, a Maxtool indica o Disco de Corte Mesh Ø115 mm, da linha Premium, com borda mesh para corte fino e sem lascar.')
+    'Para porcelanato, a Maxtool tem o Disco de Corte Mesh Premium (75, 110 e 115 mm), com borda que corta sem lascar, o Disco Turbo Extra Fino Pro e o Disco Multipropósito Std. Na serra de bancada, as serras diamantadas Porcelanato e Mesh (250 a 350 mm); para furos, a broca diamantada para porcelanato (6 a 70 mm).')
 F_ULTRA = ('Qual disco usar para ultracompactos?',
-           'Para ultracompactos, a Maxtool tem o Disco Ultracompacto Ø120 mm, dedicado a superfícies densas que pedem corte preciso.')
+    'Para ultracompactos, a Maxtool tem o Disco de Corte Ultracompactos Premium (120 mm), as serras diamantadas Ultracompactos Premium (250 a 350 mm) e Pro (350 mm) e a broca diamantada para Dekton (10 a 70 mm).')
 F_QUARTZITO = ('Qual serra usar para quartzito?',
-               'Para quartzito, a Maxtool tem a Serra Quartzito Silenciosa 350 × 50 × 20 × 3,2 mm, desenvolvida para esse material duro. Para outras medidas, a equipe técnica indica a opção certa.')
+    'Para quartzito, a Maxtool tem a Serra Diamantada Quartzito Premium (250, 300 e 350 mm, segmento de 20 mm). O catálogo também indica para quartzito a Serra Ultracompactos e a Serra Turbo Protegida Premium.')
 F_MATERIAIS = ('Para quais materiais são as ferramentas Maxtool?',
                'Mármore e granito, porcelanato, quartzito, nanoglass, ultracompactos, concreto e granilite.')
 F_MTDAY_LOJA = ('Como levar o Max Tool Day para a minha loja?',

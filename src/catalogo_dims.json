@@ -1,0 +1,514 @@
+{
+"ac-adaptador-husqvarna": [
+419,
+373
+],
+"ac-anel-redutor": [
+392,
+310
+],
+"ac-dimmer": [
+313,
+453
+],
+"ac-feltro-velcro": [
+520,
+473
+],
+"ac-gaveta-lvs": [
+460,
+333
+],
+"ac-porca-aperto": [
+485,
+437
+],
+"ac-pulverizador": [
+520,
+261
+],
+"ac-refil-velcro": [
+390,
+340
+],
+"ac-roda-feltro": [
+520,
+458
+],
+"ac-suporte-borracha-concavo": [
+490,
+253
+],
+"ac-suporte-borracha-flat": [
+518,
+520
+],
+"ac-suporte-borracha-velcro": [
+520,
+469
+],
+"ac-suporte-caracol-aluminio": [
+520,
+375
+],
+"ac-suporte-caracol-velcro": [
+520,
+477
+],
+"ac-suporte-espuma-velcro": [
+520,
+443
+],
+"ac-suporte-frankfurt": [
+445,
+390
+],
+"ac-suporte-plastico-sem-velcro": [
+520,
+444
+],
+"ac-suporte-plastico-velcro": [
+520,
+461
+],
+"apicoador-frankfurt": [
+520,
+482
+],
+"base-meia-esquadria-makita": [
+520,
+353
+],
+"base-meia-esquadria-premium": [
+520,
+325
+],
+"base-meia-esquadria-pro": [
+520,
+306
+],
+"broca-conica-chanfro": [
+301,
+374
+],
+"broca-conica-multiproposito": [
+314,
+366
+],
+"broca-dekton": [
+277,
+520
+],
+"broca-haste-multiproposito": [
+39,
+520
+],
+"broca-marmore-granito-escareador": [
+284,
+520
+],
+"broca-marmore-granito": [
+288,
+520
+],
+"broca-nanoglass": [
+176,
+520
+],
+"broca-porcelanato": [
+226,
+520
+],
+"desbaste-acabamento": [
+392,
+392
+],
+"desbaste-curvo": [
+388,
+400
+],
+"desbaste-disco": [
+394,
+394
+],
+"desbaste-flat": [
+389,
+400
+],
+"disco-premium-continuo": [
+498,
+520
+],
+"disco-premium-curvo": [
+491,
+520
+],
+"disco-premium-mesh": [
+498,
+520
+],
+"disco-premium-segmentado": [
+497,
+520
+],
+"disco-premium-turbo-narrow": [
+495,
+520
+],
+"disco-premium-turbo-protegido-curvo": [
+475,
+520
+],
+"disco-premium-turbo-protegido": [
+498,
+520
+],
+"disco-premium-ultra-turbo": [
+494,
+520
+],
+"disco-premium-ultracompactos": [
+495,
+520
+],
+"disco-pro-continuo": [
+492,
+520
+],
+"disco-pro-protegido": [
+496,
+520
+],
+"disco-pro-turbo-extra-fino": [
+498,
+520
+],
+"disco-pro-turbo-narrow": [
+485,
+520
+],
+"disco-pro-turbo": [
+497,
+520
+],
+"disco-std-continuo": [
+497,
+520
+],
+"disco-std-multiproposito": [
+494,
+520
+],
+"disco-std-segmentado": [
+493,
+520
+],
+"disco-std-turbo": [
+500,
+520
+],
+"escova-tynex-frankfurt-carbeto": [
+402,
+432
+],
+"escova-tynex-frankfurt-diamantada": [
+426,
+450
+],
+"escova-tynex-m14-carbeto": [
+440,
+445
+],
+"escova-tynex-m14-diamantada": [
+465,
+459
+],
+"ferr-aplicador-selante": [
+313,
+520
+],
+"ferr-aplicador-silicone": [
+218,
+520
+],
+"ferr-avental": [
+440,
+520
+],
+"ferr-esquadro-angular": [
+520,
+364
+],
+"ferr-esquadro-l": [
+520,
+362
+],
+"ferr-esquadro-nicho": [
+414,
+512
+],
+"ferr-grampo-a": [
+220,
+472
+],
+"ferr-grampo-f": [
+216,
+520
+],
+"ferr-grampo-rapido": [
+519,
+520
+],
+"ferr-guia-furo": [
+388,
+520
+],
+"ferr-mao-amiga": [
+421,
+520
+],
+"ferr-metro-articulado": [
+371,
+520
+],
+"ferr-metro-sueco": [
+519,
+520
+],
+"ferr-nivelador-porcelanato": [
+489,
+520
+],
+"ferr-rolo-fibra": [
+520,
+327
+],
+"ferr-sargento-45": [
+520,
+433
+],
+"ferr-sargento-grampo-c": [
+339,
+505
+],
+"ferr-sargento-pressao": [
+239,
+520
+],
+"ferr-trena-abs": [
+520,
+224
+],
+"ferr-trena-maxtool": [
+415,
+450
+],
+"ferr-ventosa-45": [
+520,
+327
+],
+"ferr-ventosa-nivelamento": [
+447,
+505
+],
+"htc-husqvarna": [
+445,
+364
+],
+"htc-lvs": [
+411,
+368
+],
+"htc-soft": [
+451,
+367
+],
+"lixa-premium-3-passos": [
+480,
+520
+],
+"lixa-premium-5-passos": [
+473,
+520
+],
+"lixa-premium-barril": [
+458,
+450
+],
+"lixa-premium-buff-colmeia": [
+479,
+520
+],
+"lixa-premium-buff": [
+477,
+520
+],
+"lixa-premium-cfi": [
+480,
+520
+],
+"lixa-premium-colmeia": [
+481,
+520
+],
+"lixa-premium-concreto": [
+496,
+520
+],
+"lixa-premium-convexa": [
+492,
+520
+],
+"lixa-premium-esponja": [
+499,
+520
+],
+"lixa-premium-rebaixo-italiano": [
+496,
+520
+],
+"lixa-premium-super-floor": [
+482,
+520
+],
+"lixa-premium-turbo": [
+463,
+520
+],
+"lixa-pro-3-passos": [
+470,
+520
+],
+"lixa-sl-concreto": [
+497,
+520
+],
+"lixa-sl-piso": [
+494,
+520
+],
+"lixa-sl-polimento": [
+492,
+520
+],
+"lixa-sle-polimento": [
+479,
+520
+],
+"lixa-slx-polimento": [
+492,
+520
+],
+"lixa-slxe-polimento": [
+474,
+520
+],
+"lixa-std-diamantada": [
+496,
+520
+],
+"lixa-std-espiral": [
+481,
+520
+],
+"maquina-esmerilhadeira-ea-mt-025": [
+520,
+240
+],
+"maquina-politriz-mt-01": [
+520,
+278
+],
+"maquina-politriz-mt-023": [
+520,
+257
+],
+"maquina-politriz-pneumatica-pp-mt-023": [
+520,
+374
+],
+"maquina-politriz-vertical-pv-mt-025": [
+520,
+498
+],
+"poliborda-branco-bisote": [
+477,
+520
+],
+"poliborda-branco-face": [
+440,
+520
+],
+"poliborda-red-bisote": [
+468,
+520
+],
+"poliborda-red-face": [
+477,
+520
+],
+"prato-diamantado-velcro": [
+427,
+445
+],
+"rebolo-apicoado": [
+271,
+250
+],
+"serra-premium-mesh": [
+500,
+520
+],
+"serra-premium-nanoglass": [
+500,
+520
+],
+"serra-premium-porcelanato": [
+499,
+520
+],
+"serra-premium-quartzito": [
+509,
+520
+],
+"serra-premium-tree-step": [
+502,
+520
+],
+"serra-premium-turbo-protegida": [
+501,
+520
+],
+"serra-premium-ultracompactos": [
+520,
+520
+],
+"serra-pro-concreto-granilite": [
+500,
+520
+],
+"serra-pro-silenciosa-tree-step": [
+505,
+520
+],
+"serra-pro-silenciosa": [
+502,
+520
+],
+"serra-pro-ultracompacto": [
+501,
+520
+],
+"serra-std-diamantada": [
+504,
+520
+],
+"sistema-apicoador": [
+473,
+450
+],
+"suporte-esmerilhadeira": [
+520,
+372
+]
+}

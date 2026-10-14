@@ -36,8 +36,10 @@
 
   /* ---------- Dados ---------- */
   // dados gerados pelo build (src/data.py) — HTML de produtos, etapas e reels já vem pronto na página
-  const DATA = JSON.parse(document.getElementById('site-data')?.textContent || '{}');
-  const PRODUTOS = DATA.produtos || [];
+  // dados completos dos produtos (catálogo) — carregados só quando o modal é aberto
+  let PRODUTOS = null;
+  const carregarProdutos = () => PRODUTOS ? Promise.resolve(PRODUTOS)
+    : fetch(window.MAXTOOL_DATA || '/assets/catalogo/produtos.json').then((r) => r.json()).then((d) => (PRODUTOS = d.produtos));
 
   /* ---------- Header, menu, progresso ---------- */
   const header = $('.site-header');
@@ -95,34 +97,54 @@
 
   const trackEl = $('#showcase-track');
 
-  // grade com filtros + busca (/produtos/)
+  // grade com filtros + busca (/produtos/) — aceita ?cat=&material=&etapa=&nivel=&q= na URL
   const grid = $('#prod-grid');
   if (grid) {
     const cards = $$('.prod', grid);
     const busca = $('#busca-prod');
     const vazio = $('#busca-vazia');
+    const nEl = $('#grid-n');
+    const limpar = $('#grid-limpar');
+    const sel = { cat: $('#f-cat'), material: $('#f-mat'), etapa: $('#f-etapa'), nivel: $('#f-nivel') };
     const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    let filtro = 'todos';
+    const params = new URLSearchParams(location.search);
+    Object.entries(sel).forEach(([k, el]) => { if (el && params.get(k)) el.value = params.get(k); });
+    if (busca && params.get('q')) busca.value = params.get('q');
     const aplicar = (animar) => {
-      const [k, v] = filtro.split(':');
+      const f = Object.fromEntries(Object.entries(sel).map(([k, el]) => [k, el?.value || '']));
       const q = norm(busca?.value.trim() || '');
-      const shown = cards.filter((c) => (k === 'todos' || c.dataset[k] === v) && (!q || norm(c.textContent).includes(q)));
+      const shown = cards.filter((c) => (!f.cat || c.dataset.cat === f.cat)
+        && (!f.material || c.dataset.mats.split(' ').includes(f.material))
+        && (!f.etapa || c.dataset.etapa === f.etapa)
+        && (!f.nivel || c.dataset.nivel === f.nivel)
+        && (!q || norm(c.textContent).includes(q)));
       cards.forEach((c) => c.classList.toggle('is-out', !shown.includes(c)));
+      if (nEl) nEl.textContent = shown.length;
       if (vazio) vazio.hidden = shown.length > 0;
-      if (animar && window.gsap && !reduced) gsap.fromTo(shown, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .5, stagger: .05, ease: 'power3.out' });
+      const ativo = Object.values(f).some(Boolean) || !!q;
+      if (limpar) limpar.hidden = !ativo;
+      const u = new URL(location.href);
+      Object.entries(f).forEach(([k, v]) => (v ? u.searchParams.set(k, v) : u.searchParams.delete(k)));
+      q ? u.searchParams.set('q', busca.value.trim()) : u.searchParams.delete('q');
+      history.replaceState(null, '', u);
+      if (animar && window.gsap && !reduced) gsap.fromTo(shown.slice(0, 12), { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .5, stagger: .04, ease: 'power3.out' });
     };
-    $$('.filtro').forEach((f) => f.addEventListener('click', () => {
-      $$('.filtro').forEach((x) => { x.classList.toggle('is-on', x === f); x.setAttribute('aria-pressed', String(x === f)); });
-      filtro = f.dataset.filtro;
+    Object.entries(sel).forEach(([k, el]) => el?.addEventListener('change', () => {
       aplicar(true);
-      track('filter_products', { filtro });
+      track('filter_products', { filtro: k, valor: el.value });
     }));
+    limpar?.addEventListener('click', () => {
+      Object.values(sel).forEach((el) => { if (el) el.value = ''; });
+      if (busca) busca.value = '';
+      aplicar(true);
+    });
     let tBusca;
     busca?.addEventListener('input', () => {
       aplicar(false);
       clearTimeout(tBusca);
       tBusca = setTimeout(() => busca.value.trim() && track('search', { search_term: busca.value.trim(), tipo: 'produtos' }), 900);
     });
+    if ([...params.keys()].length) aplicar(false);
   }
 
   // guia "a ferramenta certa para cada material"
@@ -147,20 +169,27 @@
 
   /* ---------- Modal ---------- */
   const modal = $('#produto-modal');
-  function openProduct(id) {
-    const p = PRODUTOS.find((x) => x.id === id);
+  async function openProduct(id) {
+    let lista;
+    try { lista = await carregarProdutos(); } catch { return; }
+    const p = lista.find((x) => x.id === id);
     if (!p) return;
     const img = $('#modal-img');
-    img.src = ASSET + 'produtos/' + p.img;
+    img.onerror = () => { img.onerror = null; img.src = p.fallback; };
+    img.src = p.img;
     img.alt = p.nome;
     img.classList.toggle('is-disc', !!p.disc);
     const nv = $('#modal-nivel');
-    nv.textContent = p.nivel || 'Linha Maxtool';
+    const rotulo = p.nivel || (p.linha ? 'Linha ' + p.linha : 'Linha Maxtool');
+    nv.textContent = rotulo;
     nv.className = 'tag' + (p.nivel ? ' is-' + p.nivel.toLowerCase() : '');
     $('#modal-cat').textContent = p.cat;
     $('#modal-nome').textContent = p.nome;
     $('#modal-desc').textContent = p.desc;
-    $('#modal-specs').innerHTML = p.specs.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
+    const linhas = p.specs.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`);
+    if (p.materiais?.length) linhas.push(`<dt>Indicado para</dt><dd>${esc(p.materiais.join(', '))}</dd>`);
+    if (p.pagina) linhas.push(`<dt>Catálogo 2026</dt><dd><a href="/catalogo/maxtool-catalogo-2026-leve.pdf#page=${p.pagina}" target="_blank" rel="noopener">página ${p.pagina}</a></dd>`);
+    $('#modal-specs').innerHTML = linhas.join('');
     if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
     track('view_item', { item_id: p.id, item_name: p.nome, item_category: p.cat });
   }

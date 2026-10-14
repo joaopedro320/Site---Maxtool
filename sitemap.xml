@@ -2,66 +2,188 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://maxtool.com.br/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image><image:loc>https://maxtool.com.br/assets/produtos/serra-marmore-hero.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://maxtool.com.br/produtos/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-continuo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-turbo-protegido.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-curvo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-turbo-protegido-curvo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-turbo-narrow.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-mesh.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-ultra-turbo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-ultracompactos.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-premium-segmentado.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-porcelanato.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-ultracompactos.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-mesh.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-quartzito.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-nanoglass.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-turbo-protegida.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-premium-tree-step.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-pro-continuo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-pro-protegido.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-pro-turbo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-pro-turbo-narrow.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-pro-turbo-extra-fino.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-pro-silenciosa.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-pro-silenciosa-tree-step.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-pro-ultracompacto.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-pro-concreto-granilite.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-std-continuo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-std-segmentado.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-std-turbo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/disco-std-multiproposito.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/serra-std-diamantada.png</image:loc></image:image>
     <image:image><image:loc>https://maxtool.com.br/assets/produtos/serra-marmore.webp</image:loc></image:image>
-    <image:image><image:loc>https://maxtool.com.br/assets/produtos/disco-mesh.webp</image:loc></image:image>
-    <image:image><image:loc>https://maxtool.com.br/assets/produtos/serra-quartzito.webp</image:loc></image:image>
-    <image:image><image:loc>https://maxtool.com.br/assets/produtos/lixa-3-passos.webp</image:loc></image:image>
-    <image:image><image:loc>https://maxtool.com.br/assets/produtos/serra-tree-step.webp</image:loc></image:image>
-    <image:image><image:loc>https://maxtool.com.br/assets/produtos/disco-ultracompacto.webp</image:loc></image:image>
-    <image:image><image:loc>https://maxtool.com.br/assets/produtos/escova-tynex.webp</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/maquina-esmerilhadeira-ea-mt-025.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/maquina-politriz-mt-01.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/maquina-politriz-mt-023.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/maquina-politriz-pneumatica-pp-mt-023.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/maquina-politriz-vertical-pv-mt-025.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-slx-polimento.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-sl-piso.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-sl-polimento.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-sl-concreto.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-3-passos.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-cfi.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-esponja.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-colmeia.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-concreto.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-5-passos.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-barril.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-super-floor.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-rebaixo-italiano.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-buff.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-buff-colmeia.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-turbo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-premium-convexa.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-sle-polimento.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-pro-3-passos.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-slxe-polimento.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-std-espiral.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/lixa-std-diamantada.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/poliborda-branco-face.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/poliborda-branco-bisote.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/poliborda-red-face.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/poliborda-red-bisote.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-marmore-granito.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-marmore-granito-escareador.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-dekton.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-porcelanato.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-nanoglass.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-haste-multiproposito.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-conica-chanfro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/broca-conica-multiproposito.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/htc-husqvarna.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/htc-soft.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/htc-lvs.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/prato-diamantado-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/escova-tynex-m14-diamantada.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/escova-tynex-frankfurt-diamantada.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/escova-tynex-m14-carbeto.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/escova-tynex-frankfurt-carbeto.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/desbaste-flat.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/desbaste-curvo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/desbaste-acabamento.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/desbaste-disco.png</image:loc></image:image>
     <image:image><image:loc>https://maxtool.com.br/assets/produtos/prato-desbaste.webp</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/apicoador-frankfurt.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/sistema-apicoador.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/rebolo-apicoado.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/base-meia-esquadria-premium.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/base-meia-esquadria-pro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/base-meia-esquadria-makita.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/suporte-esmerilhadeira.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-sargento-45.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-sargento-pressao.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-grampo-rapido.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-grampo-f.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-sargento-grampo-c.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-grampo-a.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-esquadro-nicho.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-trena-maxtool.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-trena-abs.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-guia-furo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-metro-articulado.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-metro-sueco.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-esquadro-angular.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-esquadro-l.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-mao-amiga.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-ventosa-45.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-ventosa-nivelamento.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-aplicador-silicone.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-aplicador-selante.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-nivelador-porcelanato.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-rolo-fibra.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ferr-avental.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-plastico-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-plastico-sem-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-borracha-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-borracha-concavo.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-borracha-flat.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-espuma-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-caracol-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-caracol-aluminio.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-feltro-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-roda-feltro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-refil-velcro.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-suporte-frankfurt.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-adaptador-husqvarna.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-gaveta-lvs.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-anel-redutor.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-porca-aperto.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-pulverizador.png</image:loc></image:image>
+    <image:image><image:loc>https://maxtool.com.br/assets/catalogo/ac-dimmer.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://maxtool.com.br/sobre/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://maxtool.com.br/pecas/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://maxtool.com.br/max-tool-day/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image><image:loc>https://maxtool.com.br/assets/instagram/maxtool-day.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://maxtool.com.br/onde-comprar/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://maxtool.com.br/seja-um-revendedor/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image><image:loc>https://maxtool.com.br/assets/produtos/catalogo-capa.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://maxtool.com.br/politica-de-privacidade/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://maxtool.com.br/contato/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
