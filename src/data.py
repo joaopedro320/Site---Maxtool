@@ -5,7 +5,7 @@ REMOTE = ''  # PDFs (catálogo, vistas) servidos pelo próprio site: /catalogo/ 
 
 # Google Tag Manager — preencher com o ID do contêiner (ex.: 'GTM-ABC1234').
 # Vazio = o snippet não é inserido. GA4, Meta Pixel e Hotjar entram pelo GTM.
-GTM_ID = ''
+GTM_ID = 'GTM-WZNMHZJG'
 
 EMPRESA = {
     'nome': 'Maxtool',
