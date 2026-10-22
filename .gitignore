@@ -1,6 +1,20 @@
-# pasta gerada para upload manual (npx vercel) — recriada por: python3 src/build.py
+# gerado pelo build (python src/build.py) — pasta de upload manual da QH4
 deploy/
 .vercel/
-.DS_Store
+
+# Python
 __pycache__/
 *.pyc
+
+# segredos nunca vão para o repositório
+.env
+.env.*
+
+# sobras de editores e sistemas
+.DS_Store
+.idea/
+
+# sobras do site v1 (Astro), caso existam localmente
+node_modules/
+dist/
+.astro/
