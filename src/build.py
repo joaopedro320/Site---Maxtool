@@ -395,6 +395,17 @@ PAGES = [
                          'Respeito aqui não é só com a ferramenta: é com os seus dados também. Sem juridiquês, conforme a LGPD.',
                          'Política de Privacidade'),
                'privacidade']),
+    # [Maxtool 22/10/2026] Página adicionada fora do pacote QH4: URL pública de
+    # instruções de exclusão de dados cadastrada no app da Meta (WhatsApp
+    # Business). Não remover sem antes atualizar o painel da Meta.
+    # Conteúdo em src/sections/exclusao.html.
+    dict(path='/exclusao-de-dados/', slug='exclusao', crumb='Exclusão de dados',
+         title='Exclusão de Dados | Maxtool',
+         description='Passo a passo para pedir a exclusão dos seus dados pessoais tratados pela Maxtool — formulários do site e avisos por WhatsApp — conforme a LGPD.',
+         body=[page_hero('Privacidade', 'Exclusão<br>de dados.',
+                         'Você manda nos seus dados. Se quiser que a Maxtool apague o que tem sobre você — formulários do site ou avisos por WhatsApp — o caminho é este, sem burocracia.',
+                         'Exclusão de dados'),
+               'exclusao']),
     dict(path='/contato/', slug='contato', crumb='Contato',
          title='Contato Maxtool | WhatsApp, Telefone e Endereço Vitória-ES',
          description=f'Fale com a Maxtool: WhatsApp {E["whatsapp"]}, {E["email"]}, (27) 3019-3040. Av. Paulino Muller, 945, Vitória-ES. Atendemos todo o Brasil.',
@@ -651,7 +662,8 @@ def render(p, layout):
 # =====================================================================
 def sitemap():
     prio = {'/': '1.0', '/produtos/': '0.9', '/seja-um-revendedor/': '0.9', '/onde-comprar/': '0.8',
-            '/pecas/': '0.8', '/max-tool-day/': '0.7', '/sobre/': '0.7', '/contato/': '0.6', '/politica-de-privacidade/': '0.2'}
+            '/pecas/': '0.8', '/max-tool-day/': '0.7', '/sobre/': '0.7', '/contato/': '0.6', '/politica-de-privacidade/': '0.2',
+            '/exclusao-de-dados/': '0.1'}
     imgs = {'/': ['produtos/serra-marmore-hero.webp'], '/produtos/': [p['fallback'].replace('/assets/', '', 1) for p in PRODUTOS],
             '/max-tool-day/': ['instagram/maxtool-day.jpg'], '/seja-um-revendedor/': ['produtos/catalogo-capa.jpg']}
     urls = []

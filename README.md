@@ -16,6 +16,7 @@ Ferramentas, abrasivos e máquinas para marmoraria — desenvolvido por [QH4 Gro
 | Seja um revendedor | `/seja-um-revendedor/` |
 | Contato | `/contato/` |
 | Política de Privacidade | `/politica-de-privacidade/` |
+| Exclusão de dados (URL exigida pelo app da Meta) | `/exclusao-de-dados/` |
 
 ## Como editar
 
@@ -32,10 +33,15 @@ python3 src/build.py
 
 O build gera as páginas, `sitemap.xml`, `robots.txt`, `llms.txt`, `llms-full.txt`, `404.html`, os dados estruturados (schema.org) e a pasta `deploy/` (para upload manual).
 
-## Publicar
+## Publicar (maxtool.com.br)
 
-- **Pela Vercel + GitHub:** importe este repositório na Vercel (Framework: *Other*, sem build). A raiz já é o site; o `.vercelignore` deixa `src/` de fora.
-- **Upload manual:** `cd deploy && npx vercel --prod`
+O deploy é **automático**: push na branch `main` → GitHub Actions
+(`.github/workflows/deploy.yml`) espelha os arquivos no VPS da Hostinger
+(`/var/www/site`, usuário restrito `deploy`). Detalhes e checklist de
+manutenção: ver `CLAUDE.md`.
+
+(As instruções originais da QH4 previam Vercel — não usamos; o site roda no
+nosso VPS junto com a API de leads `/api/...`.)
 
 ## Visualizar localmente
 
@@ -47,5 +53,7 @@ Abra http://localhost:5181
 
 ## Pendências
 
-- Preencher `GTM_ID` em `src/data.py` (GA4, Meta Pixel e Hotjar entram pelo GTM).
-- Formulários e busca por CEP usam a API do servidor atual (`/api/...`). Fora dele, caem no WhatsApp com os dados preenchidos.
+- Pedir à QH4 acesso de administrador ao contêiner `GTM-WZNMHZJG` (GA4, Meta
+  Pixel e Hotjar entram por ele) — o contêiner é um ativo da Maxtool.
+- Formulários e busca por CEP usam a API do servidor (`/api/...`, código em
+  `infra/`). Fora dele, caem no WhatsApp com os dados preenchidos.

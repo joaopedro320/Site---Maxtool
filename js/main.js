@@ -661,11 +661,82 @@
     });
   });
 
-  /* ---------- Onde comprar (CEP) ---------- */
+  /* ---------- Onde comprar (CEP + indicação de loja) ---------- */
+  // [Maxtool 22/10/2026] Indicação de loja recriada do site v1 (prospecção B2B,
+  // decisões de 16-17/07 e 05/08/2026): quem não acha revenda — ou prefere outra
+  // loja — indica onde já compra. Loja e WhatsApp de quem indica são obrigatórios
+  // e vão para /api/indicar-loja. Preservar ao integrar novas versões da QH4.
   const cepForm = $('#cep-form');
   if (cepForm) {
     const cepStatus = $('#cep-status');
     const lojas = $('#lojas');
+    let ultimoCep = '', ultimaCidade = '';
+
+    const formIndicacao = (cidade) => `
+      <form class="form indica-form" id="form-indica" novalidate>
+        <label>Nome da loja*<input id="i-loja" maxlength="120"></label>
+        <div class="indica-duo">
+          <label>Cidade<input id="i-cidade" maxlength="80" value="${esc(cidade)}"></label>
+          <label>Contato da loja <small>(se souber)</small><input id="i-contato" maxlength="120" placeholder="WhatsApp ou Instagram"></label>
+        </div>
+        <label>Seu WhatsApp* <small>(para te avisar quando tiver Maxtool lá)</small><input id="i-zap" type="tel" inputmode="tel" data-mask="tel" maxlength="20" placeholder="(00) 00000-0000"></label>
+        <label class="check"><input type="checkbox" id="i-novidades" checked> Quero receber novidades e ofertas da Maxtool pelo WhatsApp. <em>Dá para sair quando quiser — é só responder "sair".</em></label>
+        <div><button class="btn btn-red" type="submit" id="i-enviar">Indicar essa loja</button></div>
+        <p class="form-status" id="i-status" role="status"></p>
+        <p class="indica-lgpd">Usamos esses dados só para o contato comercial, conforme a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+      </form>`;
+
+    const enviaIndicacao = async (e) => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const st = $('#i-status');
+      const btnI = $('#i-enviar');
+      const loja = $('#i-loja').value.trim();
+      st.className = 'form-status'; st.textContent = '';
+      if (!loja) { st.textContent = 'Escreve pelo menos o nome da loja.'; st.classList.add('err'); return; }
+      const zapDigitos = $('#i-zap').value.replace(/\D/g, '');
+      if (zapDigitos.length < 10 || zapDigitos.length > 11) {
+        st.textContent = zapDigitos ? 'Confere o WhatsApp? Precisa de DDD + número (ex.: 27 99999-0000).'
+          : 'Falta seu WhatsApp — é por ele que a gente te avisa quando a loja tiver Maxtool.';
+        st.classList.add('err'); return;
+      }
+      const dados = {
+        loja, cidade: $('#i-cidade').value.trim() || ultimaCidade, contato: $('#i-contato').value.trim(),
+        whatsapp: $('#i-zap').value.trim(), cep: ultimoCep, origem: 'site-v2',
+        aceita_novidades: $('#i-novidades').checked ? 'on' : '', website: $('#oc-website').value,
+      };
+      const utm = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'].forEach((k) => { if (utm.get(k)) dados[k] = utm.get(k); });
+      btnI.disabled = true; btnI.textContent = 'Enviando…';
+      try {
+        const r = await fetch('/api/indicar-loja', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dados) });
+        if (r.status === 429) throw new Error('rate');
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        track('generate_lead', { form: 'indicacao', regiao: dados.cidade });
+        form.innerHTML = '<div class="form-ok form-ok--mini"><h3>Indicação recebida!</h3><p>Nossa equipe vai atrás da loja — e se a parceria sair, você fica sabendo primeiro.</p></div>';
+      } catch (err) {
+        st.innerHTML = (err.message === 'rate' ? 'Muitos envios seguidos — aguarde alguns minutos. ' : 'Não deu para enviar por aqui agora. ')
+          + `<a href="${waLink(`Olá! Quero indicar uma loja da minha região para vender Maxtool: ${loja}${dados.cidade ? ` (${dados.cidade})` : ''}.`)}" target="_blank" rel="noopener">Mande pelo WhatsApp</a> que a gente registra a indicação.`;
+        st.classList.add('err');
+        btnI.disabled = false; btnI.textContent = 'Indicar essa loja';
+      }
+    };
+
+    const ligaIndicacao = () => {
+      const abrir = $('#indica-abrir');
+      const bloco = $('#indica-bloco');
+      if (abrir && bloco) abrir.addEventListener('click', () => {
+        bloco.hidden = false; abrir.hidden = true;
+        bloco.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+      const form = $('#form-indica');
+      if (form) {
+        let comecei = false;
+        form.addEventListener('focusin', () => { if (!comecei) { comecei = true; track('form_start', { form: 'indicacao' }); } });
+        form.addEventListener('submit', enviaIndicacao);
+      }
+    };
+
     cepForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const cep = $('#cep').value.replace(/\D/g, '');
@@ -675,7 +746,9 @@
       track('search', { search_term: 'cep', tipo: 'onde_comprar' });
       const semLoja = (cidade) => `
         <article class="loja-card"><b>Ainda não temos revenda pertinho de você${cidade ? ' (' + esc(cidade) + ')' : ''}</b>
-        <span>Fala com a gente: indicamos a revenda mais próxima ou onde comprar Maxtool online.</span>
+        <span>Mas você pode mudar isso: <strong>indica a loja onde você já compra</strong> que a gente chama ela para revender Maxtool — e te avisa quando os produtos chegarem lá.</span>
+        ${formIndicacao(cidade)}
+        <span class="indica-alt">Prefere falar direto com a gente? Indicamos a revenda mais próxima ou onde comprar Maxtool online.</span>
         <div class="acts"><a href="${waLink(`Olá! Não encontrei um revendedor Maxtool perto de mim (CEP ${cep}). Pode me indicar onde comprar?`)}" target="_blank" rel="noopener">Chamar no WhatsApp →</a></div></article>`;
       try {
         const r = await fetch('/api/onde-comprar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ cep, website: $('#oc-website').value }) });
@@ -683,11 +756,23 @@
         if (r.status === 429) { cepStatus.textContent = 'Muitas consultas seguidas — aguarde alguns minutos.'; cepStatus.classList.add('err'); return; }
         if (!r.ok) throw new Error('HTTP ' + r.status);
         const d = await r.json();
+        ultimoCep = cep; ultimaCidade = d.cidade || '';
         lojas.innerHTML = d.lojas?.length
-          ? d.lojas.map((l, i) => `<article class="loja-card" style="animation-delay:${i * .08}s"><b>${esc(l.nome)}</b><span>${esc(l.cidade)}${l.dist != null ? ` · a ${esc(l.dist)} km de você` : ''}</span><div class="acts">${l.whatsapp ? `<a href="https://wa.me/${esc(String(l.whatsapp).replace(/\D/g, ''))}?text=${encodeURIComponent('Olá! Vi no site da Maxtool que vocês revendem a marca.')}" target="_blank" rel="noopener" data-track="loja_whatsapp">WhatsApp →</a>` : ''}${l.tel ? `<a href="tel:${esc(String(l.tel).replace(/\D/g, ''))}">${esc(l.tel)}</a>` : ''}</div></article>`).join('')
+          ? d.lojas.map((l, i) => `<article class="loja-card" style="animation-delay:${i * .08}s"><b>${esc(l.nome)}</b><span>${esc(l.cidade)}${l.dist != null ? ` · a ${esc(l.dist)} km de você` : ''}</span><div class="acts">${l.whatsapp ? `<a href="https://wa.me/${esc(String(l.whatsapp).replace(/\D/g, ''))}?text=${encodeURIComponent('Olá! Vi no site da Maxtool que vocês revendem a marca.')}" target="_blank" rel="noopener" data-track="loja_whatsapp">WhatsApp →</a>` : ''}${l.tel ? `<a href="tel:${esc(String(l.tel).replace(/\D/g, ''))}">${esc(l.tel)}</a>` : ''}</div></article>`).join('') + `
+            <div class="indica-wrap">
+              <button class="indica-toggle" id="indica-abrir" type="button">Prefere comprar em outra loja? <b>Indica ela</b> que a gente tenta levar a Maxtool até lá.</button>
+              <article class="loja-card" id="indica-bloco" hidden>
+                <b>Indica a loja onde você já compra</b>
+                <span>A gente chama ela para revender Maxtool — e te avisa quando os produtos chegarem lá.</span>
+                ${formIndicacao(ultimaCidade)}
+              </article>
+            </div>`
           : semLoja(d.cidade);
+        ligaIndicacao();
       } catch {
+        ultimoCep = cep;
         lojas.innerHTML = semLoja('');
+        ligaIndicacao();
       } finally {
         btn.disabled = false; btn.textContent = 'Localizar';
       }

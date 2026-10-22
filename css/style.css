@@ -1074,3 +1074,23 @@ main > .onde:first-child { min-height: 92vh; display: flex; align-items: center;
   .gf-etapa { flex: none; }
   .guia-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   [Maxtool 22/10/2026] Acréscimos fora do pacote QH4 — preservar
+   ao integrar novas versões do site:
+   • indicação de loja no "Onde comprar" (js/main.js)
+   • lista numerada da página /exclusao-de-dados/
+   ============================================================ */
+.indica-wrap { margin-top: 4px; }
+.indica-toggle { background: none; border: 0; padding: 0; font: inherit; font-size: 16px; color: var(--steel-dark); cursor: pointer; text-align: left; }
+.indica-toggle b { color: var(--red); }
+.indica-toggle:hover b { text-decoration: underline; }
+.indica-form { display: grid; gap: 14px; margin-top: 16px; }
+.indica-form .check { margin: 2px 0 4px; }
+.indica-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.indica-lgpd { font-size: 13px; color: var(--steel-dark); margin: 0; }
+.indica-alt { display: block; margin-top: 16px; }
+.form-ok--mini { padding: 18px 0; }
+.form-ok--mini h3 { font-size: 30px; }
+.priv-texto ol { padding-left: 22px; display: grid; gap: 10px; margin: 12px 0; }
+@media (max-width: 640px) { .indica-duo { grid-template-columns: 1fr; } }

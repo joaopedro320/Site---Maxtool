@@ -1,0 +1,13 @@
+# [Maxtool 22/10/2026] O git confunde os PDFs das vistas explodidas com texto
+# (gerados por reportlab, quase sem bytes nulos) e, num checkout no Windows com
+# autocrlf, "corrige" as quebras de linha — corrompendo o arquivo na pasta de
+# trabalho. Estas regras travam qualquer conversão nos binários do site.
+*.pdf -text
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.webp -text
+*.avif -text
+*.ico -text
+*.woff -text
+*.woff2 -text
